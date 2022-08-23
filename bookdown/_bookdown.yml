@@ -1,0 +1,20 @@
+book_filename: "integration-bland-unga"
+language:
+  ui:
+    chapter_name: " "
+  label:
+    fig: !expr function(i) paste0("Figur ", substr(i,1,1), tolower(c(LETTERS, "Å", "Ä", "Ö")[as.integer(substr(i,3,nchar(i)))]), ". ")
+    tab: 'Tabell '
+delete_merged_file: true
+rmd_files:
+- index.Rmd
+- 01-strukturell_integration.Rmd
+- 02-social_integration.Rmd
+- 03-kulturell_integration.Rmd
+- 04-politisk_integration.Rmd
+- 05-framtidstro.Rmd
+- definitioner.Rmd
+- datakallor.Rmd
+- figurindex.Rmd
+- boken.Rmd
+- om_oss.Rmd

@@ -1,0 +1,15 @@
+# Figurindex {-}
+
+### Strukturell integration {-}
+
+\@ref(fig:f1d1) - Tillgång till pengar
+
+\@ref(fig:f1d2) - Om man måste avstå aktiviteter på grund av ekonomiska orsaker
+
+### Social integration {-}
+
+### Kulturell integration {-}
+
+### Politisk integration {-}
+
+### Adaption, framtidstro och hälsa {-}

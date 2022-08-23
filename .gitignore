@@ -1,0 +1,6 @@
+.DS_Store
+.Rhistory
+_targets/
+scratch.R
+_targets.bak2
+.vscode/

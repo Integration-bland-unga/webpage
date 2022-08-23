@@ -1,0 +1,45 @@
+--- 
+site: bookdown::bookdown_site
+title: "Integration bland unga"
+output: bookdown::gitbook
+documentclass: book
+biblio-style: apalike
+link-citations: yes
+description: "Syskonsida till boken Integration bland unga"
+---
+
+# Introduktion  {-}
+
+Denna sida presenterar faktamaterial om integrationen bland unga i Sverige och är ett komplement till boken [Integration bland unga](#boken) av Janne Jonsson, Carina Mood och Georg Treuter. 
+
+Här finns information om integration i flera dimensioner, så som [strukturell](#strukturell-integration), [social](#social-integration) och [politisk integration](#politisk-integration), samt information om ungdomars [adaption](#adaption-framtidstro-och-hälsa), som innefattar till exempel framtidstro och hälsa. 
+
+```{r, echo=FALSE}
+knitr::include_graphics(file.path("assets", "images", "dimensioner.png"))
+```
+
+Informationen bygger på ett [gediget datamaterial](#datakällor) som inkluderar både enkäter och registerdata från svenska myndigheter.
+
+Upptäck det du är intresserad av genom att välja ett avsnitt i menyn till vänster. Det finns även ett [index](#figurindex) över samtliga figurer som presenteras på denna sida.
+
+Sidan kommer under hand att uppdateras med mer information.
+
+
+
+
+
+```{r include=FALSE, warning=FALSE, echo=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown', 'data.table'
+), 'packages.bib',)
+# include library and function source
+library(targets)
+library(fst)
+library(ggplot2)
+library(forcats)
+library(data.table)
+tar_config_set(store = "../_targets/")
+source("../R_functions/figure_functions.R")
+knitr::opts_chunk$set(out.width="100%")
+```

@@ -1,0 +1,5 @@
+# Boken {-}
+
+```{r, echo=FALSE}
+knitr::include_graphics(file.path("assets", "images", "bokomslag.jpeg"))
+```

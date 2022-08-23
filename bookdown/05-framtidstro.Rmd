@@ -1,0 +1,65 @@
+# Adaption, framtidstro och hälsa
+
+## Internaliserande problem
+
+Internaliserande problem (\@ref(fig:internalising))
+
+```{r internalising, echo=FALSE, warning=FALSE, fig.cap = "Internaliserande problem (nervositet, ängslighet, depression, huvudvärk, magont respektive svårt att somna), uppdelat på bakgrund och kön. Skalan går från 0 (aldrig) till 3 (ofta)"}
+tar_read(p_internalising)
+```
+
+Internaliserande problem över ålder (\@ref(fig:internalising-age))
+
+```{r internalising-age, echo=FALSE, warning=FALSE, fig.cap = "Internaliserande problem i olika åldrar, uppdelat på kön och bakgrund. Värdena visar genomsnittliga svar på frågor om hur ofta man har problem med nervositet, ängslighet, depression, huvudvärk, magont och svårt att somna. Skalan går från 0 (aldrig) till 3 (ofta)"}
+tar_read(p_internalising_age)
+```
+
+## Externaliserande problem
+
+
+Andelen som uppger att de antingen vandaliserat, stulit eller burit vapen under de
+senaste tre månaderna, uppdelat på bakgrund och kön (\@ref(fig:f8-3))
+
+```{r f8-3, echo=FALSE, warning=FALSE, fig.cap = "Andelen som uppger att de antingen vandaliserat, stulit eller burit vapen under de senaste tre månaderna, uppdelat på bakgrund och kön"}
+tar_read(p_f8_3)
+```
+
+Andelen som dricker, röker eller använder droger (har inte svarat att de ”Aldrig” gör det) och andelen som varit riktigt full någon gång de senaste tre månaderna, uppdelat på bakgrund (\@ref(fig:f8-4))
+
+```{r f8-4, echo=FALSE, warning=FALSE, fig.cap = "Andelen som dricker, röker eller använder droger (har inte svarat att de ”Aldrig” gör det) och andelen som varit riktigt full någon gång de senaste tre månaderna, uppdelat på bakgrund"}
+tar_read(p_f8_4)
+```
+
+Andelen som dricker alkohol vid olika åldrar, uppdelat på bakgrund och kön (\@ref(fig:f8-5)). 
+
+```{r f8-5, echo=FALSE, warning=FALSE, fig.cap = "Andelen som dricker alkohol vid olika åldrar, uppdelat på bakgrund och kön."}
+tar_read(p_f8_5)
+```
+
+## Framtidstro 
+
+Generell framtidstro vid 14 års ålder, uppdelat på bakgrund respektive kön. Andelen som instämmer i påståendet ”Jag kommer att få det bra i framtiden”.
+
+```{r f8-6, echo=FALSE, warning=FALSE, fig.cap = "Generell framtidstro vid 14 års ålder, uppdelat på bakgrund respektive kön. Andelen som instämmer i påståendet ”Jag kommer att få det bra i framtiden”."}
+tar_read(p_f8_6)
+```
+
+Framtidstro på olika områden vid 14 års ålder, uppdelat på bakgrund. (”När du är 30 år, tror du att du kommer att …?”).
+
+```{r f8-7, echo=FALSE, warning=FALSE, fig.cap = "Framtidstro på olika områden vid 14 års ålder, uppdelat på bakgrund. (”När du är 30 år, tror du att du kommer att …?”)"}
+tar_read(p_f8_7)
+```
+
+## Livstillfredsställelse, självkänsla och allmän hälsa
+
+Livstillfredsställelse vid 14 års ålder, uppdelat på bakgrund, ursprungsregion och kön. Genomsnittligt svar på frågan ”Hur nöjd är du med ditt liv generellt?”
+
+```{r f8-8, echo=FALSE, warning=FALSE, fig.cap = "Livstillfredsställelse vid 14 års ålder, uppdelat på bakgrund, ursprungsregion och kön. Genomsnittligt svar på frågan ”Hur nöjd är du med ditt liv generellt?”"}
+tar_read(p_f8_8)
+```
+
+Självskattad hälsa vid 14 års ålder, uppdelat på kön och bakgrund.
+
+```{r f8-9, echo=FALSE, warning=FALSE, fig.cap = "Självskattad hälsa vid 14 års ålder, uppdelat på kön och bakgrund."}
+tar_read(p_f8_9)
+```

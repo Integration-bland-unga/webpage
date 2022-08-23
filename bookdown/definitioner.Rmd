@@ -1,0 +1,34 @@
+# Definitioner {-}
+
+## Svensk och utländsk bakgrund {-}
+
+När vi jämför villkor och utfall för olika grupper behöver vi också ha ord för dessa grupper. Hur ska vi beteckna den grupp som fötts i ett annat land och flyttat till Sverige, och vilken term ska vi använda för att beteckna deras barn?
+
+SCB använder termerna _utrikes födda_, _födda i Sverige med utländsk bakgrund_ och _födda i Sverige med svensk bakgrund_. Dessa är dock klumpiga att använda i löpande text. Vi har utgått från SCB:s princip men valt termer som förutom att vara entydiga och beskrivande också är tillräckligt korta för att fungera i löpande text. Till skillnad från en del akademiska termer är de också lättbegripliga och därmed inkluderande för en bred allmänhet.
+
+ * Utrikesfödd: Är född i ett annat land än Sverige 
+ * Svenskfödd: Är född i Sverige.
+ * Utländsk bakgrund: Är utrikesfödd av utrikesfödda föräldrar eller är svenskfödd med utrikesfödda föräldrar (dvs. ingen förälder är född i Sverige). 
+ * Svensk bakgrund: Har minst en svenskfödd förälder. 
+
+För att kunna beskriva skillnaden inom gruppen med utländsk bakgrund mellan dem som är utrikesfödda och dem som är svenskfödda använder vi följande termer:
+
+ * Generation 1: Synonymt med utrikesfödd.
+ * Generation 2: Är född i Sverige och har utrikesfödda föräldrar (ingen förälder är född i Sverige).
+
+Ursprungsland baseras på föräldrars födelseland, och om föräldrar har olika födelseländer gäller följande: Om en av föräldrarna är svenskfödd kodas barnets ursprungsland som Sverige. Om båda föräldrarna har ett annat födelseland än Sverige kodas barnets ursprungsland som mammans ursprungsland. För adopterade barn är det adoptivföräldrarnas ursprungsland som används i kodningen.
+
+
+## Integration: Vad menar vi? {-}
+
+I forskningslitteraturen förekommer olika definitioner av integration. Vi använder den som ser integration som likhet mellan grupper när det gäller möjligheter och rättigheter, social acceptans, sociala relationer och sociala nätverk samt grundläggande värderingar. Likhet innebär förstås inte konformitet. Vi förväntar oss att det i alla grupper finns en ganska stor variation mellan individer i exempelvis utbildning, identitet och attityder. Integrationen handlar alltså om likhet på gruppnivå, inte individnivå.
+
+Genom att betona likhet utgår vi inte från något antaget statiskt normvärde för majoriteten, utan definitionen öppnar för att det som är typiskt (genomsnitt, median, typvärde) förändras över tid, även i majoritetsbefolkningen och möjligen också i samspel med invandrade grupper. 
+
+Det vi gör i våra empiriska analyser är att mäta skillnader mellan grupper (dvs. avvikelser från likhet) och i många fall hur dessa skillnader utvecklas med åldern. Vi har alltså medvetet, och till skillnad från vissa andra studier på området, valt att också studera ungdomar med svensk bakgrund för att kunna jämföra grupperna och därigenom studera skillnaderna mellan dem och se om de ökar eller minskar. 
+
+Med vår definition är integration inte ett normativt begrepp, utan empiriskt beskrivande. Vi beskriver graden av likhet mellan barn till utrikesfödda och till svenskfödda i ett antal centrala avseenden men i de flesta fall utan att värdera detta, det vill säga bedöma det som bra eller dåligt.
+
+```{r, echo=FALSE}
+knitr::include_graphics(file.path("assets", "images", "dimensioner.png"))
+```

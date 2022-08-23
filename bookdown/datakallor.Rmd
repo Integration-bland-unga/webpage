@@ -1,0 +1,32 @@
+# Datakällor {-}
+
+## CILS4EU {-}
+
+För att fylla kunskapsluckor om integration bland unga startade vi 2010 ett forskningsprojekt i fyra olika länder, England, Tyskland, Nederländerna och Sverige: Children of Immigrants Longitudinal Survey in Four European Countries (CILS4EU).
+
+Projektet baserar sig huvudsakligen på en enkätundersökning (kallad YES! – Youth in Europe Study). Undersökningen är longitudinell, vilket betyder att den följer samma individer över tid. Basen för den svenska delen av undersökningen var Institutet för social forskning (SOFI) vid Stockholms universitet, och sedan 2015 bedrivs projektet i samverkan med Institutet för framtidsstudier (IFFS). Statistiska centralbyrån (SCB) har varit ansvarig för fältarbetet, inklusive urvalsförfarandet och datainsamlingen.
+
+I CILS4EU följer vi stora urval av unga – i Sverige ca 5 000 personer – från 14–15 års ålder och över tid. Undersökningen baseras på ett överurval av skolor med hög andel utrikesfödda, vilket möjliggör studiet också av olika undergrupper av unga med utländsk bakgrund. Med statistiska vikter är urvalen riksrepresentativa, vilket gör att vi för denna åldersgrupp kan generalisera till landet som helhet. De första tre tillfällena är fullt jämförbara med motsvarande undersökningar i England, Nederländerna och Tyskland, eftersom vi använde samma urvalsmetoder och harmoniserade formulär för de tre första undersökningsvågorna.
+
+Urvalet av unga inför den första omgången (2010–2011) gjordes i tre steg:
+ 
+ 1. Skolor drogs slumpmässigt över hela Sverige inom fyra strata som avgränsade skolor med olika hög andel elever med utländsk bakgrund (0–9 %, 10–29 %, 30–59 % respektive 60–100 %), och överurval drogs från skolor med hög andel med utländsk bakgrund för att få tillräckliga bastal för att möjliggöra studier av integration. Skolans urvalssannolikhet stod i proportion till skolans storlek.
+ 2. Två klasser drogs slumpmässigt inom varje skola.
+ 3. Alla elever i dessa klasser bjöds in att delta i undersökningen (liksom en lärare).
+
+Till föräldrarna skickade också en postalenkät, med en total svarsprocent i våg 1 och 2 kombinerat om 49 %. 
+Skolor och skolklasser för barn med särskilda behov ingår inte i urvalsramen. I andra undersökningsomgången var urvalet detsamma, men man bjöd också in dem som tillkommit i klasserna under året. Dessa nytillkommande studenter utesluts i våra analyser. Alla data är avidentifierade av SCB och innehåller ingen identifierande information.
+
+I första undersökningsomgången (’vågen’) deltog 76% av skolorna och 99 % av skolklasserna inom de deltagande skolorna, och siffrorna var i stort sett desamma i andra vågen. Svarsfrekvensen på individnivå var i våg 1 86 % och i våg 2 87,5 %, och bortfallet berodde framför allt på skolfrånvaro (mindre än 1 % avböjde medverkan). En del av dem som var frånvarande vid första omgången var närvarande vid andra omgången, och räknar man andelen av grundurvalet som deltog i antingen våg 1 eller våg 2 var svarsfrekvensen 90 %. 
+
+I första omgången deltog totalt 5 029 elever i 129 olika skolor och 251 skolklasser, och om man räknar med dem som var frånvarande vid första omgången men närvarande vid andra så deltog totalt 5 448 elever. Respondenterna som deltagit i våg 1 eller 2 följdes i den tredje omgången upp via webbenkät, med en svarsfrekvens på 51 %, och i den fjärde omgången via webb- eller pappersenkät, med en svarsfrekvens på 46 %.
+
+Surveyundersökningar har alltid bortfall, och med bortfall finns en risk att de svarande inte längre är representativa för den population som urvalet dragits ur. CILS4EU har fördelen att vi de två första åren gjorde datainsamlingen i skolor och därmed fick ett mycket litet bortfall. I den tredje och fjärde undersökningsomgången har vi dock stora bortfall (47 % respektive 54 %), och analyser visar att det finns en systematik i bortfallet: kvinnor svarar t.ex. oftare än män – men det finns inga skillnader i svarsbenägenhet efter utländsk bakgrund.
+Eftersom vi har ovanligt mycket information från tidigare undersökningsomgångar för de icke-svarande kan vi använda detta för att korrigera för snedvridande bortfall. Vi använder så kallad multipel imputering med ’chained random forests’ (R-paketet ’missRanger’) som skattar effekter med hänsyn till selektiviteten på totalt 1 600 variabler på individ- och skolnivå, och som tar hänsyn till interaktioner och icke-linjäriteter. 
+Mer information om undersökningen, inklusive formulär och tekniska rapporter, och länkar till olika publikationer baserade på CILS4EU finns på [projektets hemsida](https://www.cils4.eu)
+
+## Registerdata {-}
+
+Huvuddelen av de resultat vi presenterad baseras på data från YES! (CILS4EU), men vi visar även resultat från analyser av svenska registerdata om utbildning, arbetsmarknad, partnerval och inkomster. För jämförbarhet avgränsar vi oss också i dessa analyser huvudsakligen till dem som gick ut årskurs 9 år 2012, alltså samma population av unga som urvalet i CILS4EU representerar. Det främsta skälet till att göra så är att sammansättningen av grupper som immigrerat till Sverige förändras undan för undan, vilket gör att man måste vara försiktig med att generalisera från tidigare till senare kohorter. I vissa analyser behöver vi dock sträcka oss till något äldre kohorter, eftersom vi vill kunna säga något om utfall – särskilt på arbetsmarknaden – i högre åldrar.
+
+De registerdata vi använder är avidentifierade och innehåller ingen identifierande information. Data används genom SCBs MONA-system, vilket innebär att data inte lämnar SCB utan görs tillgängliga via en säker server där all användning loggas. 
