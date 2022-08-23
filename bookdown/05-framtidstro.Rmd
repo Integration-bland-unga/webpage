@@ -1,14 +1,16 @@
 # Adaption, framtidstro och hälsa
 
+Adaption är en individuell anpassningsprocess som står i relation till två olika miljöer och är en integrationsaspekt av mer psykologisk art. Adaptionsproblem kan ta sig flera olika uttryck, dels som internaliserande problem som nervositet, nedstämdhet och ångest och dels som externaliserande problem som ilska eller normbrytande beteende. Detta kan i sin tur också påverka hälsa, livstillfredsställelse och framtidstro. Vi undersöker här om det finns indikationer på en problematisk adaption bland unga med utländsk bakgrund genom att studera olika mått inom dessa områden.
+
 ## Internaliserande problem
 
-Internaliserande problem (\@ref(fig:internalising))
+För att studera internaliserande problem har vi gjort ett index av frågor rörande emotionella symtom (ängslighet, oro och depression) och psykosomatisk symtom (ont i magen, ont i huvudet, svårt att somna). Index går mellan 0 och 3, där högre värden innebär att man oftare har dessa problem. I Figur 5.1 ser vi det den genomsnittliga frekvensen av dessa symtom, uppdelat på bakgrund och kön. Det tydligaste resultatet är att flickor har oftare internaliserande problem än pojkar. Vidare så har unga i generation 2 något lägre frekvens av dessa symtom jämfört med andra unga, och tittar vi på ursprungsregioner så verkar unga med bakgrund i länder i Afrika, Mellanöstern och Östeuropa uppleva dessa problem i mindre grad (även om skillnaden inte är statistiskt säkerställd).
 
 ```{r internalising, echo=FALSE, warning=FALSE, fig.cap = "Internaliserande problem (nervositet, ängslighet, depression, huvudvärk, magont respektive svårt att somna), uppdelat på bakgrund och kön. Skalan går från 0 (aldrig) till 3 (ofta)"}
 tar_read(p_internalising)
 ```
 
-Internaliserande problem över ålder (\@ref(fig:internalising-age))
+Om vi tittar på förändring över ålder (Figur 5b) ser vi att frekvensen av internaliserande problem ökar för flickor över alla åldrar, medan det för pojkar ökar mellan 14 och 15 år och sedan håller sig stabilt. Det betyder att könsgapet växer när unga blir äldre. Skillnaden mellan unga med olika bakgrund av respektive kön är försumbar.
 
 ```{r internalising-age, echo=FALSE, warning=FALSE, fig.cap = "Internaliserande problem i olika åldrar, uppdelat på kön och bakgrund. Värdena visar genomsnittliga svar på frågor om hur ofta man har problem med nervositet, ängslighet, depression, huvudvärk, magont och svårt att somna. Skalan går från 0 (aldrig) till 3 (ofta)"}
 tar_read(p_internalising_age)
@@ -17,8 +19,9 @@ tar_read(p_internalising_age)
 ## Externaliserande problem
 
 
-Andelen som uppger att de antingen vandaliserat, stulit eller burit vapen under de
-senaste tre månaderna, uppdelat på bakgrund och kön (\@ref(fig:f8-3))
+### Normbrytande beteende och kriminalitet
+
+I vår studie har vi tre indikatorer som mäter lättare brottslighet. Vi frågade om man under de tre senaste månaderna har burit kniv eller gjort sig skyldig till snatteri/stöld eller vandalism. I Figur 5c ser vi andelen som svarat ja på någon av frågorna, uppdelat på kön och bakgrund, och vi ser inte någon skillnaden mellan unga med svensk respektive utländsk bakgrund. Skillnaderna mellan unga från olika ursprungsregioner är inte heller statistiskt säkerställda. Den enda tydliga skillnaden vi ser är att pojkar har utfört dessa handlingar i större utsträckning än flickor. 
 
 ```{r f8-3, echo=FALSE, warning=FALSE, fig.cap = "Andelen som uppger att de antingen vandaliserat, stulit eller burit vapen under de senaste tre månaderna, uppdelat på bakgrund och kön"}
 tar_read(p_f8_3)

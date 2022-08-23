@@ -92,5 +92,6 @@ samhällsengagemang
 adaption-framtidstro-och-hälsa
 internaliserande-problem
 externaliserande-problem
+normbrytande-beteende-och-kriminalitet
 framtidstro
 livstillfredsställelse-självkänsla-och-allmän-hälsa
