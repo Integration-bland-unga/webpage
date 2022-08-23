@@ -735,7 +735,10 @@ list(
                                                 "response",
                                                 c("Nej", "Vet inte", "Ja"))),
 
-    tar_target(p_f8_7, dot_plot(reverse_sort(dt_f8_7, "background"), "background", "proportion", color_var = "response", direction = "laying") +
+    tar_target(p_f8_7, dot_plot(reverse_sort(dt_f8_7, "background"), "background", "proportion", 
+                                        color_var = "response",
+                                        color_values = dot_palette(length(unique(dt_f8_7[,response])), type = "diverging"),
+                                        direction = "laying") +
                                         facet_grid(rows = vars(question)) + 
                                         theme(legend.position = "bottom", strip.text.y = element_text(angle = 0)) +
                                         coord_flip()),

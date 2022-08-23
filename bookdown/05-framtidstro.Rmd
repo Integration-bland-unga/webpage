@@ -18,7 +18,6 @@ tar_read(p_internalising_age)
 
 ## Externaliserande problem
 
-
 ### Normbrytande beteende och kriminalitet
 
 I vår studie har vi tre indikatorer som mäter lättare brottslighet. Vi frågade om man under de tre senaste månaderna har burit kniv eller gjort sig skyldig till snatteri/stöld eller vandalism. I Figur 5c ser vi andelen som svarat ja på någon av frågorna, uppdelat på kön och bakgrund, och vi ser inte någon skillnaden mellan unga med svensk respektive utländsk bakgrund. Skillnaderna mellan unga från olika ursprungsregioner är inte heller statistiskt säkerställda. Den enda tydliga skillnaden vi ser är att pojkar har utfört dessa handlingar i större utsträckning än flickor. 
@@ -27,13 +26,13 @@ I vår studie har vi tre indikatorer som mäter lättare brottslighet. Vi fråga
 tar_read(p_f8_3)
 ```
 
-Andelen som dricker, röker eller använder droger (har inte svarat att de ”Aldrig” gör det) och andelen som varit riktigt full någon gång de senaste tre månaderna, uppdelat på bakgrund (\@ref(fig:f8-4))
+### Alkohol, rökning och droger
+
+I Figur 5d visar vi andelen 14-åringar som någon gång druckit alkohol, rökt, varit riktigt full eller tagit droger, uppdelat på bakgrund. Andelen som röker eller tar droger skiljer sig inte mycket mellan unga med svensk respektive utländsk bakgrund utöver att unga med utländsk bakgrund i något högre grad rapporterar att de tagit droger. När det kommer till alkohol så rapporterar fler unga med svensk bakgrund både att de druckit och varit riktigt fulla. Om vi sedan tittar på hur andelen som dricker alkohol förändras när de blir äldre (Figur 5e) ser vi att skillnaden mellan grupperna ökar.
 
 ```{r f8-4, echo=FALSE, warning=FALSE, fig.cap = "Andelen som dricker, röker eller använder droger (har inte svarat att de ”Aldrig” gör det) och andelen som varit riktigt full någon gång de senaste tre månaderna, uppdelat på bakgrund"}
 tar_read(p_f8_4)
 ```
-
-Andelen som dricker alkohol vid olika åldrar, uppdelat på bakgrund och kön (\@ref(fig:f8-5)). 
 
 ```{r f8-5, echo=FALSE, warning=FALSE, fig.cap = "Andelen som dricker alkohol vid olika åldrar, uppdelat på bakgrund och kön."}
 tar_read(p_f8_5)
@@ -41,13 +40,13 @@ tar_read(p_f8_5)
 
 ## Framtidstro 
 
-Generell framtidstro vid 14 års ålder, uppdelat på bakgrund respektive kön. Andelen som instämmer i påståendet ”Jag kommer att få det bra i framtiden”.
+Det är lätt att föreställa sig att socioekonomisk utsatthet eller exponering för fördomar kan leda till en brist på framtidstro, och också i diskussioner kring förortens problem tillskrivs unga med utländsk bakgrund en känsla av hopplöshet. När vi däremot frågade våra intervjupersoner i vilken mån de stämmer in i påstående "Jag kommer att få det bra i framtiden" så ser vi en annan bild. I Figur 5f ser vi att unga med utländsk bakgrund har en minst lika hög hoppfullhet som unga med svensk bakgrund. Speciellt unga med bakgrund i länder i Afrika och Mellanöstern visar på en hög framtidstro. 
 
 ```{r f8-6, echo=FALSE, warning=FALSE, fig.cap = "Generell framtidstro vid 14 års ålder, uppdelat på bakgrund respektive kön. Andelen som instämmer i påståendet ”Jag kommer att få det bra i framtiden”."}
 tar_read(p_f8_6)
 ```
 
-Framtidstro på olika områden vid 14 års ålder, uppdelat på bakgrund. (”När du är 30 år, tror du att du kommer att …?”).
+Även när unga fick svara inom specifika framtidsområden så kvarstår optimismen. Figur 5g visar att nästan alla unga tror att de kommer ha en god hälsa och ett jobb när de är 30 år. Runt hälften av unga med svensk bakgrund tror att de kommer ha mycket pengar när de är 30 år medan upp till så många som tre fjärdedelar av unga med utländsk tror samma sak. 
 
 ```{r f8-7, echo=FALSE, warning=FALSE, fig.cap = "Framtidstro på olika områden vid 14 års ålder, uppdelat på bakgrund. (”När du är 30 år, tror du att du kommer att …?”)"}
 tar_read(p_f8_7)

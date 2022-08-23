@@ -93,5 +93,6 @@ adaption-framtidstro-och-hälsa
 internaliserande-problem
 externaliserande-problem
 normbrytande-beteende-och-kriminalitet
+alkohol-rökning-och-droger
 framtidstro
 livstillfredsställelse-självkänsla-och-allmän-hälsa
