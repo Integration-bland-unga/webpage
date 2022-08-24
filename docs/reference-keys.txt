@@ -69,6 +69,7 @@ fig:f8-6
 fig:f8-7
 fig:f8-8
 fig:f8-9
+fig:f8-10
 strukturell-integration
 ekonomi
 hur-går-det-i-skolan
@@ -92,7 +93,6 @@ samhällsengagemang
 adaption-framtidstro-och-hälsa
 internaliserande-problem
 externaliserande-problem
-normbrytande-beteende-och-kriminalitet
-alkohol-rökning-och-droger
 framtidstro
-livstillfredsställelse-självkänsla-och-allmän-hälsa
+livstillfredsställelse-och-allmän-hälsa
+dödsrisker-i-unga-åldrar
