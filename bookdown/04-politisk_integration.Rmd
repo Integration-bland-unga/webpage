@@ -4,13 +4,13 @@ Från [SCBs mätningar](https://www.scb.se/hitta-statistik/statistik-efter-amne/
 
 ## Politiskt intresse
 
-Vi har studerat politisk intresse med hjälp av två frågor. Först har vi tittat på i vilken utsträckning unga pratar om politik med sina föräldrar. Detta är viktigt då intresse för politik och samhällsfrågor ofta kommer ifrån föräldrars engagemang i sådana frågor. I Figur 4a ser ni hur våra deltagare har svarat på frågan om hur ofta föräldrarna brukar "prata med dig om politiska händelser och samhällsfrågor". Bland unga med utländsk bakgrund svarar närmare 60% av 15-åringarna "varje månad" eller oftare. Motsvarande andel för dem med svensk bakgrund är 50%. 
+Vi har studerat politisk intresse med hjälp av två frågor. Först har vi tittat på i vilken utsträckning unga pratar om politik med sina föräldrar. Detta är viktigt då intresse för politik och samhällsfrågor ofta kommer ifrån föräldrars engagemang i sådana frågor. I Figur \@ref(fig:discuss-pol) ser ni hur våra deltagare har svarat på frågan om hur ofta föräldrarna brukar "prata med dig om politiska händelser och samhällsfrågor". Bland unga med utländsk bakgrund svarar närmare 60% av 15-åringarna "varje månad" eller oftare. Motsvarande andel för dem med svensk bakgrund är 50%. 
 
 ```{r discuss-pol, echo=FALSE, warning=FALSE, fig.cap = "Andelen som diskuterar politik med sina föräldrar, uppdelat på bakgrund."}
 tar_read(p_discuss_pol)
 ```
 
-Vi har också frågat specifikt hur intresserade unga är av _svensk_ politik, där svarsalternativen varit "Väldigt mycket", "Mycket". "En del", "Lite" eller "Väldigt lite/inte alls". I Figur 4b visar vi hur den genomsnittliga intresset förändras över ålder, uppdelat på bakgrund. Där ser vi att vid 15-års ålder har unga med utländsk bakgrund ett något högre intresse men vid 19-års ålder så ligger intresset på samma nivå oavsett bakgrund. 
+Vi har också frågat specifikt hur intresserade unga är av _svensk_ politik, där svarsalternativen varit "Väldigt mycket", "Mycket". "En del", "Lite" eller "Väldigt lite/inte alls". I Figur \@ref(fig:political-interest-age) visar vi hur den genomsnittliga intresset förändras över ålder, uppdelat på bakgrund. Där ser vi att vid 15-års ålder har unga med utländsk bakgrund ett något högre intresse men vid 19-års ålder så ligger intresset på samma nivå oavsett bakgrund. 
 
 ```{r political-interest-age, echo=FALSE, warning=FALSE, fig.cap = "Intresse för svensk politik vid olika åldrar, uppdelat på bakgrund."}
 tar_read(p_political_interest_age)
@@ -18,7 +18,7 @@ tar_read(p_political_interest_age)
 
 ## Samhällsengagemang
 
-För att kunna första ungas samhällsengagemang och opinionsbildning ställde vi frågan till 19-åringar: "Har du gjort något av följande för att åstadkomma förändringar eller protestera under de senaste tolv månaderna?" med alternativen "diskuterat samhällsfrågor på internet", "varit på möte med något politiskt parti eller ungdomsorganisation", burit "pins eller andra märken" för att uttrycka en åsikt och "deltagit i en demonstration eller manifestation". I Figur 4c ser vi andelen som svara ja, uppdelat på generation. Även om skillnaderna för de olika aktiviteterna är små, så finns det ett genomgående mönster som visar att unga med utländsk bakgrund är något mer aktiva än unga med svenska bakgrund. 
+För att kunna första ungas samhällsengagemang och opinionsbildning ställde vi frågan till 19-åringar: "Har du gjort något av följande för att åstadkomma förändringar eller protestera under de senaste tolv månaderna?" med alternativen "diskuterat samhällsfrågor på internet", "varit på möte med något politiskt parti eller ungdomsorganisation", burit "pins eller andra märken" för att uttrycka en åsikt och "deltagit i en demonstration eller manifestation". I Figur \@ref(fig:soc-engage) ser vi andelen som svara ja, uppdelat på generation. Även om skillnaderna för de olika aktiviteterna är små, så finns det ett genomgående mönster som visar att unga med utländsk bakgrund är något mer aktiva än unga med svenska bakgrund. 
 
 ```{r soc-engage, echo=FALSE, warning=FALSE, fig.cap = "Samhällsengagemang av fyra slag, uppdelat på bakgrund."}
 tar_read(p_soc_engage)

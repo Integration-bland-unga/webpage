@@ -1,7 +1,6 @@
 ##
 # General functions
 
-
 # Dictionary for common abbreviations
 dictionary <- function(old){
     library(Dict)
@@ -102,7 +101,6 @@ set_level_names <- function(dt, factor, names){
     return(dt)
 
 }
-
 
 ##
 # Plotting functions
@@ -206,4 +204,35 @@ line_plot <- function(dt, x, y, group_var = NULL){
             scale_color_manual(values=dot_palette(length(unique(dt[,get(group_var)]))))
     
     return(p)
+}
+
+##
+# Bookdown functions
+
+# This function find reference to figures and changes the format from 1.1 to 1a,
+# 1.2 to 1b et.c
+change_crossrefs <- function (file_paths) {
+
+    for (path in file_paths) {
+
+        tx <- readLines(path)
+
+        for (i in 30:1) {
+            tx <-    gsub(
+                paste0("(Figur\\s.+\">[1-9])", "(\\.",i, ")(<\\/a>)"),
+                paste0("\\1", letters[i], "\\3"),
+                tx
+            )
+        }
+
+        writeLines(tx, con = path)
+    }
+    return(file_paths)
+}
+
+gen_figindex <- function (reference_keys) {
+
+
+    file_path <- file.path("docs", "figurindex.html")
+    return(file_path)
 }
