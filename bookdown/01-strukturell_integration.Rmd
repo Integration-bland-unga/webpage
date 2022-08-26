@@ -1,3 +1,5 @@
+# (PART\*) Resultat {-}
+
 # Strukturell integration 
 
 ## Ekonomi {-}

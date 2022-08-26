@@ -219,7 +219,7 @@ change_crossrefs <- function (file_paths) {
 
         # Replace figure cross-references for figurindex
         if (grepl("figurindex", path)) {
-            for (i in 30:1) {
+            for (i in 26:1) {
                 tx <-   gsub(
                             paste0("(<p>.+\">[1-9])(\\.", i, ")"),
                             paste0("\\1", letters[i]),
