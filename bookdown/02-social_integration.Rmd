@@ -1,7 +1,7 @@
 # Social integration
 
 
-## Familj och familjerelationer
+## Familj och familjerelationer {-}
 
 Figur \@ref(fig:famtyp-orig) visar familjesammansättningen bland 14-åringar med svensk respektive utländsk bakgrund. Det familjerna med utländsk bakgrund är indelade efter ursprungsregioner. Den mörkgröna prickarna visar att andelen unga som bor med både sina föräldrar (antingen biologiska eller adoptivföräldrar) är betydlig lägre för dem vars föräldrar kommer från övriga Afrika (inkludera inte Nordafrika) och Asien. För unga med bakgrund i andra ursprungsregioner är andelen som bor med båda föräldrar ungefär samma som för unga med svensk bakgrund. 
 
@@ -22,7 +22,7 @@ tar_read(p_famindex)
 ```
 
 
-## Sociala relationer
+## Sociala relationer {-}
 
 Vänskapsband mellan grupper är en viktig indikation på social integration och när vi frågade våra elever i årskurs 8 om deras fem bästa vänner ställda vi bland annat frågan om dessa vänner har svensk eller utländsk bakgrund. I Figur \@ref(fig:avg-foreign-friends) ser vi vilken andel av de fem bästa vännerna som har utländsk bakgrund, uppdelat på kön och bakgrund. I genomsnitt är knappt en femtedel av vännerna till unga med svensk bakgrund av utländsk bakgrund medan andelen är betydligt högre för unga med utländsk bakgrund (runt 70% för flickor och 60% för pojkar). 
 
@@ -66,7 +66,7 @@ Slutligen så har vi också tittat på inter-etnisk integration i parförhållan
 knitr::include_graphics(file.path("assets", "images", "social" ,"5_13_endo_old_pan-4.png"))
 ```
 
-## Sociala aktiviteter på fritiden
+## Sociala aktiviteter på fritiden {-}
 
 Som en indikator på utåtriktad, social aktivitet använder vi frågor om fritidsaktiviteter som har en social dimension, vilket vill säga att det är sannolikt att de utförs tillsammans med andra, eller åtminstone bland andra. Vi frågade hur ofta man gör något av följande: Går på bio; går på pub, bar, nattklubb eller fest; deltar i föreningsaktivitet (t.ex. idrott, musik, teater eller annat); går på konsert/DJ-tillställning; går på museum. Svarsalternativen var ”varje dag”, ”en eller flera gånger i veckan”, ”en eller flera gånger i månaden”, ”mer sällan” respektive ”aldrig”. Från dessa alternativ har vi beräknat ett ungefärligt genomsnittligt antal aktiviteter per år, där vi summerat de fem olika aktiviteterna (huvudsaken är inte själva antalet aktiviteter; uträkningen gör att vi kan jämföra grupper efter en begriplig måttstock). Resultatet, uppdelat på generation och kön, visas i Figur \@ref(fig:social-gender-background).
 
@@ -88,7 +88,7 @@ De som när de var 14 år gamla nämnt att de var aktiva i någon förening fick
 tar_read(p_club_foreign)
 ```
 
-## Social acceptans
+## Social acceptans {-}
 
 Sociala relationer i skolan består inte enbart av vänskapsband utan kan också ta formen av kränkande bemötanden. Vi studerade detta genom att fråga våra elever hur ofta en elev (a) blivit retad av, (b) blivit mobbad av eller (c) varit rädd för andra elever under den senaste månaden. I Figur \@ref(fig:victim) syns ett summerat index av dessa indikatorer, där skalan går från 0 till 100 och exempelvis 11 visar att man ibland varit utsatt för en av de tre typerna av mobbning. Det vi ser är att överlag är det ovanligt att utsättas för kränkande beteenden. När unga med svensk bakgrund är i minoritet i skolan upplever de i högre utsträckning mobbning och nära unga med utländsk bakgrund är i minoritet är de på samma sätt utsatta i högre grad. Detta gäller tydligast unga i generation 1. Vi ser även att unga i generation 2 är mindre utsätta än övriga grupper.
 

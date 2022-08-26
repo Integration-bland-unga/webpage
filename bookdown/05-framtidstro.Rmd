@@ -2,7 +2,7 @@
 
 Adaption är en individuell anpassningsprocess som står i relation till två olika miljöer och är en integrationsaspekt av mer psykologisk art. Adaptionsproblem kan ta sig flera olika uttryck, dels som internaliserande problem som nervositet, nedstämdhet och ångest och dels som externaliserande problem som ilska eller normbrytande beteende. Detta kan i sin tur också påverka hälsa, livstillfredsställelse och framtidstro. Vi undersöker här om det finns indikationer på en problematisk adaption bland unga med utländsk bakgrund genom att studera olika mått inom dessa områden.
 
-## Internaliserande problem
+## Internaliserande problem {-}
 
 För att studera internaliserande problem har vi gjort ett index av frågor rörande emotionella symtom (ängslighet, oro och depression) och psykosomatisk symtom (ont i magen, ont i huvudet, svårt att somna). Index går mellan 0 och 3, där högre värden innebär att man oftare har dessa problem. I Figur \@ref(fig:internalising) ser vi det den genomsnittliga frekvensen av dessa symtom, uppdelat på bakgrund och kön. Det tydligaste resultatet är att flickor har oftare internaliserande problem än pojkar. Vidare så har unga i generation 2 något lägre frekvens av dessa symtom jämfört med andra unga, och tittar vi på ursprungsregioner så verkar unga med bakgrund i länder i Afrika, Mellanöstern och Östeuropa uppleva dessa problem i mindre grad (även om skillnaden inte är statistiskt säkerställd).
 
@@ -16,7 +16,7 @@ Om vi tittar på förändring över ålder (Figur \@ref(fig:internalising-age)) 
 tar_read(p_internalising_age)
 ```
 
-## Externaliserande problem
+## Externaliserande problem {-}
 
 ### Normbrytande beteende och kriminalitet {-}
 
@@ -38,7 +38,7 @@ tar_read(p_f8_4)
 tar_read(p_f8_5)
 ```
 
-## Framtidstro 
+## Framtidstro  {-}
 
 Det är lätt att föreställa sig att socioekonomisk utsatthet eller exponering för fördomar kan leda till en brist på framtidstro, och också i diskussioner kring förortens problem tillskrivs unga med utländsk bakgrund en känsla av hopplöshet. När vi däremot frågade våra intervjupersoner i vilken mån de stämmer in i påstående "Jag kommer att få det bra i framtiden" så ser vi en annan bild. I Figur \@ref(fig:f8-6) ser vi att unga med utländsk bakgrund har en minst lika hög hoppfullhet som unga med svensk bakgrund. Speciellt unga med bakgrund i länder i Afrika och Mellanöstern visar på en hög framtidstro. 
 
@@ -52,7 +52,7 @@ tar_read(p_f8_6)
 tar_read(p_f8_7)
 ```
 
-## Livstillfredsställelse och allmän hälsa
+## Livstillfredsställelse och allmän hälsa {-}
 
 Vi får ett sammanfattad mått på ungdomars syn på sin egen livssituation genom att fråga "På en skala mellan 1 och 10, där 1 är 'mycket missnöjd' och 10 är 'mycket nöjd', hur nöjd är du med ditt liv generellt?". I Figur \@ref(fig:f8-8) ser vi att de 14-åringar vi frågade, generellt är nöjda med sitt liv, och att unga med utländsk bakgrund är en aning högre bland unga med utländsk bakgrund. Vi ser också en viss tendens att unga med bakgrund i länder i Östeuropa, Mellanöstern och Afrika gör en mer positiv bedömning.
 
@@ -66,7 +66,7 @@ Ett vanligt sätt att mäta hälsa är att fråga personer hur de själva ser p�
 tar_read(p_f8_9)
 ```
 
-## Dödsrisker i unga åldrar
+## Dödsrisker i unga åldrar {-}
 
 Ett mer extremt mått på ojämlikhet i hälsa för den åldersgrupp vi studerar är dödlighet. Eftersom livslängden för den kohort vi studerar maximalt kan uppgå till 24 år, så kan vi (som tur är), inte observera särskilt många dödsfall. Så för att komma åt dödlighet i ung ålder har vi använt oss av alla i Sverige födda 1985-2005 och följt dessa till 2020. Nedan visar vi, i Figur \@ref(fig:f8-10), den andel som dött vid varje ålder från 15 till 30 år, uppdelat på kön och bakgrund. Där kan vi se att unga som kommit till Sverige efter åtta års ålder har den lägsta dödligheten, medan unga som fötts i Sverige till utrikesfödda föräldrar har den högsta.
 

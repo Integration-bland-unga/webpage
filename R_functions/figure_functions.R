@@ -217,12 +217,24 @@ change_crossrefs <- function (file_paths) {
 
         tx <- readLines(path)
 
-        for (i in 30:1) {
-            tx <-    gsub(
-                paste0("(Figur\\s.+\">[1-9])", "(\\.",i, ")(<\\/a>)"),
-                paste0("\\1", letters[i], "\\3"),
-                tx
-            )
+        # Replace figure cross-references for figurindex
+        if (grepl("figurindex", path)) {
+            for (i in 30:1) {
+                tx <-   gsub(
+                            paste0("(<p>.+\">[1-9])(\\.", i, ")"),
+                            paste0("\\1", letters[i]),
+                            tx
+                        )
+            }
+        # Replace figure cross-references for all other pages 
+        } else {
+            for (i in 30:1) {
+                tx <-   gsub(
+                            paste0("(Figur\\s.+\">[1-9])", "(\\.",i, ")(<\\/a>)"),
+                            paste0("\\1", letters[i], "\\3"),
+                            tx
+                        )
+            }
         }
 
         writeLines(tx, con = path)
@@ -230,9 +242,81 @@ change_crossrefs <- function (file_paths) {
     return(file_paths)
 }
 
-gen_figindex <- function (reference_keys) {
+# Generates a list of figures that are included in a .Rmd file.
+# Run on one chapter to format the list with Rmarkdown 
+gen_figlist <- function (fig_list, first_fig, last_fig, file_path, outfile) {
+    library(stringr)
+    library(readr)
+
+    # For each figure in figlist
+    for (fig in fig_list[first_fig:last_fig]) {
+        # Extract fig.cap
+        fig_cap <- str_match(
+                        read_file(file_path),
+                        paste0("(r\\s", substring(fig, 5), ".+fig.cap.+\")(.+)(\"\\})")
+                    )[[3]]
+        # Create text entry
+        cat(
+            paste0("\\@ref(",fig, ") - ", fig_cap, "\n"),
+            file = outfile,
+            sep = "\n",
+            append = TRUE
+        )
+    }
+
+    return(outfile)
+
+}
+
+# Generates the entire figureindex.Rmd. 
+# It creates headings and fetches formated figure lists using `gen_figlist()`
+gen_figindex <- function (reference_keys, outfile) {
+
+    fig_list <- scan(reference_keys, character())
+    
+    # Create empty file
+    cat("", file = outfile)
+
+    # Page title
+    cat("# Figurindex {-}\n", file = outfile, sep = "\n", append = TRUE)
+    
+    # Strukturell integration
+    cat("### Strukturell integration {-}\n", file = outfile, sep = "\n", append = TRUE)
+    
+    # Write list of figures
+    gen_figlist(fig_list, 1, 17, 
+                file_path = file.path("bookdown", "01-strukturell_integration.Rmd"), 
+                outfile = outfile)
+
+    # Social integration
+    cat("### Social integration {-}\n", file = outfile, sep = "\n", append = TRUE)
+
+    # Write list of figures
+    gen_figlist(fig_list, 18, 35, 
+                file_path = file.path("bookdown", "02-social_integration.Rmd"), 
+                outfile = outfile)
+
+    # Kulturell integration
+    cat("### Kulturell integration {-}\n", file = outfile, sep = "\n", append = TRUE)
+    # Write list of figues
+    gen_figlist(fig_list, 36, 59, 
+                file_path = file.path("bookdown", "03-kulturell_integration.Rmd"), 
+                outfile = outfile)
+
+    # Politisk integration
+    cat("### Politisk integration {-}\n", file = outfile, sep = "\n", append = TRUE)
+    # Write list of figures
+    gen_figlist(fig_list, 60, 62, 
+                file_path = file.path("bookdown", "04-politisk_integration.Rmd"), 
+                outfile = outfile)
 
 
-    file_path <- file.path("docs", "figurindex.html")
-    return(file_path)
+    # Adaption
+    cat("### Adaption, framtidstro och hälsa{-}\n", file = outfile, sep = "\n", append = TRUE)
+    # Write list of figures 
+    gen_figlist(fig_list, 63, 72, 
+                file_path = file.path("bookdown", "05-framtidstro.Rmd"), 
+                outfile = outfile)
+
+    return(outfile)
 }

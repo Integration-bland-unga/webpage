@@ -1,6 +1,6 @@
 # Datakällor {-}
 
-## CILS4EU {-}
+### CILS4EU {-}
 
 För att fylla kunskapsluckor om integration bland unga startade vi 2010 ett forskningsprojekt i fyra olika länder, England, Tyskland, Nederländerna och Sverige: Children of Immigrants Longitudinal Survey in Four European Countries (CILS4EU).
 
@@ -25,7 +25,7 @@ Surveyundersökningar har alltid bortfall, och med bortfall finns en risk att de
 Eftersom vi har ovanligt mycket information från tidigare undersökningsomgångar för de icke-svarande kan vi använda detta för att korrigera för snedvridande bortfall. Vi använder så kallad multipel imputering med ’chained random forests’ (R-paketet ’missRanger’) som skattar effekter med hänsyn till selektiviteten på totalt 1 600 variabler på individ- och skolnivå, och som tar hänsyn till interaktioner och icke-linjäriteter. 
 Mer information om undersökningen, inklusive formulär och tekniska rapporter, och länkar till olika publikationer baserade på CILS4EU finns på [projektets hemsida](https://www.cils4.eu)
 
-## Registerdata {-}
+### Registerdata {-}
 
 Huvuddelen av de resultat vi presenterad baseras på data från YES! (CILS4EU), men vi visar även resultat från analyser av svenska registerdata om utbildning, arbetsmarknad, partnerval och inkomster. För jämförbarhet avgränsar vi oss också i dessa analyser huvudsakligen till dem som gick ut årskurs 9 år 2012, alltså samma population av unga som urvalet i CILS4EU representerar. Det främsta skälet till att göra så är att sammansättningen av grupper som immigrerat till Sverige förändras undan för undan, vilket gör att man måste vara försiktig med att generalisera från tidigare till senare kohorter. I vissa analyser behöver vi dock sträcka oss till något äldre kohorter, eftersom vi vill kunna säga något om utfall – särskilt på arbetsmarknaden – i högre åldrar.
 
