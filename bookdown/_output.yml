@@ -10,14 +10,12 @@ bookdown::gitbook:
         <li><a href="./">Integration bland unga</a></li>
     edit : null
     download: null
-    search:
-      engine: lunr # or fuse
-      options: null
+    search: false
     sharing:
       facebook: true
       github: false
       twitter: true
-      linkedin: false
+      linkedin: true
       weibo: false
       instapaper: false
       vk: false

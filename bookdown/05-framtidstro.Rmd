@@ -4,7 +4,7 @@ Adaption är en individuell anpassningsprocess som står i relation till två ol
 
 ## Internaliserande problem {-}
 
-För att studera internaliserande problem har vi gjort ett index av frågor rörande emotionella symtom (ängslighet, oro och depression) och psykosomatisk symtom (ont i magen, ont i huvudet, svårt att somna). Index går mellan 0 och 3, där högre värden innebär att man oftare har dessa problem. I Figur \@ref(fig:internalising) ser vi det den genomsnittliga frekvensen av dessa symtom, uppdelat på bakgrund och kön. Det tydligaste resultatet är att flickor har oftare internaliserande problem än pojkar. Vidare så har unga i generation 2 något lägre frekvens av dessa symtom jämfört med andra unga, och tittar vi på ursprungsregioner så verkar unga med bakgrund i länder i Afrika, Mellanöstern och Östeuropa uppleva dessa problem i mindre grad (även om skillnaden inte är statistiskt säkerställd).
+För att studera internaliserande problem har vi gjort ett index av frågor rörande emotionella symtom (ängslighet, oro och depression) och psykosomatisk symtom (ont i magen, ont i huvudet, svårt att somna). Index går mellan 0 och 3, där högre värden innebär att man oftare har dessa problem. I Figur \@ref(fig:internalising) ser vi den genomsnittliga frekvensen av dessa symtom, uppdelat på bakgrund och kön. Det tydligaste resultatet är att flickor har oftare internaliserande problem än pojkar. Vidare så har unga i generation 2 något lägre frekvens av dessa symtom jämfört med andra unga, och tittar vi på ursprungsregioner så verkar unga med bakgrund i länder i Afrika, Mellanöstern och Östeuropa uppleva dessa problem i mindre grad (även om skillnaden inte är statistiskt säkerställd).
 
 ```{r internalising, echo=FALSE, warning=FALSE, fig.cap = "Internaliserande problem (nervositet, ängslighet, depression, huvudvärk, magont respektive svårt att somna), uppdelat på bakgrund och kön. Skalan går från 0 (aldrig) till 3 (ofta)"}
 tar_read(p_internalising)
@@ -56,8 +56,8 @@ tar_read(p_f8_7)
 
 Vi får ett sammanfattad mått på ungdomars syn på sin egen livssituation genom att fråga "På en skala mellan 1 och 10, där 1 är 'mycket missnöjd' och 10 är 'mycket nöjd', hur nöjd är du med ditt liv generellt?". I Figur \@ref(fig:f8-8) ser vi att de 14-åringar vi frågade, generellt är nöjda med sitt liv, och att unga med utländsk bakgrund är en aning högre bland unga med utländsk bakgrund. Vi ser också en viss tendens att unga med bakgrund i länder i Östeuropa, Mellanöstern och Afrika gör en mer positiv bedömning.
 
-```{r f8-8, echo=FALSE, warning=FALSE, fig.cap = "Livstillfredsställelse vid 14 års ålder, uppdelat på bakgrund, ursprungsregion och kön. Genomsnittligt svar på frågan ”Hur nöjd är du med ditt liv generellt?”"}
-tar_read(p_f8_8)
+```{r f8-8, echo=FALSE, warning=FALSE, fig.cap = "Livstillfredsställelse vid 14 års ålder, uppdelat på bakgrund, ursprungsregion och kön. Genomsnittligt svar på frågan ”Hur nöjd är du med ditt liv generellt?”. Svarsalternativen från 1 till 10 är kollapsade i tre kategorier."}
+tar_read(p_f8_8b)
 ```
 
 Ett vanligt sätt att mäta hälsa är att fråga personer hur de själva ser på sin hälsa, vilket vi också har gjort. Vi har frågat våra intervjupersoner hur god hälsa de har jämfört med andra i sin åldersgrupp. Återigen ser vi, i Figur \@ref(fig:f8-9), att unga med utländsk bakgrund skattar sin hälsa något högre än unga med svensk bakgrund. Detta gäller speciellt unga med bakgrund i länder i Östeuropa, Mellanöstern och Afrika. Vi ser också att pojkar skattar sin hälsa bättre än flickor.

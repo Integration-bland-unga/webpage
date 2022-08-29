@@ -121,8 +121,12 @@ pre code {
   white-space: inherit;
 }
 
-
+/* Hide font settings and information */
 body > div > div.book-body.fixed > div > div.book-header.fixed > div.dropdown.pull-left.font-settings.js-toolbar-action{
+  display: none;
+}
+
+.fa-info {
   display: none;
 }
 

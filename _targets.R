@@ -759,6 +759,26 @@ list(
                                     plot.margin = margin(10, 10, 10, 10)) +
                             facet_grid(rows = vars(category), scales = "free", space = "free") + coord_flip()),
 
+    # Life satisfaction (collapsed)
+    tar_target(dt_f8_8b, dt_f8_8[, satisfaction_c := fct_collapse(
+                            satisfaction, 
+                            "5-7" = c("5", "6", "7"), 
+                            "8 - 10 Mycket nöjd" = c("8", "9", "10 Mycket nöjd")
+                        )][, proportion_c := sum(proportion), .(satisfaction_c, background, category)]),
+    tar_target(p_f8_8b, dot_plot(
+                            reverse_sort(dt_f8_8b, "background"), 
+                            "background", "proportion_c", 
+                            color_var ="satisfaction_c",
+                            direction = "laying", 
+                            y_limits = c(0,0.85),
+                            color_values = dot_palette(length(unique(dt_f8_8b[,satisfaction_c])), type = "diverging")) + 
+                        theme(strip.text.y = element_blank(), 
+                                legend.position="right",
+                                plot.margin = margin(10, 10, 10, 10)) +
+                        facet_grid(rows = vars(category), scales = "free", space = "free") + 
+                        coord_flip()),
+
+
     # Self rated health
     tar_target(dt_f8_9, 
             load_data_table(file.path("data", "f8_9_genhea.csv"),
@@ -772,6 +792,111 @@ list(
                                         facet_grid(rows = vars(gender)) + 
                                         theme(legend.position = "bottom", 
                                         strip.text.y = element_text(angle = 0)) +
-                                        coord_flip())
+                                        coord_flip()),
+
+    ##
+    # Appendix files
+
+    # Expected highest education
+    tar_target(dt_fb4_5, 
+        load_data_table(file.path("data", "fB4_5_effort1.csv"),
+                        names = c("background", "education", "proportion", "lb", "ub"),
+                        factor_cols = c("background", "education"),
+                        dictionary_cols = c("background")),
+        format = "fst_dt"), 
+    tar_target(p_fb4_5, dot_plot(
+                            set_level_names(
+                                reverse_sort(dt_fb4_5, "background"),
+                                "education",
+                                c("Gymnasium eller lägre", "Högskola/universitet")
+                            ), 
+                            "education", "proportion", 
+                            color_var = "education", 
+                            direction = "laying",
+                            y_limits = c(0.2,0.8),
+                            color_values = dot_palette(length(unique(dt_fb4_5[, education])), type = "diverging")
+                        ) +
+                        theme(
+                            legend.position = "bottom", 
+                            strip.text.y = element_text(angle = 0),
+                            axis.text.y.left = element_blank()
+                        ) + 
+                        facet_grid(rows = vars(background)) + 
+                        coord_flip()
+                ),
+
+    # School effort
+    tar_target(dt_eff1_gen, 
+        load_data_table(file.path("data", "eff1_gen.csv"),
+                        names = c("background", "effort", "proportion", "lb", "ub"),
+                        factor_cols = c("background", "effort"),
+                        dictionary_cols = c("background")),
+        format = "fst_dt"), 
+    tar_target(p_eff1_gen, dot_plot(
+                            set_level_names(
+                                reverse_sort(dt_eff1_gen, "background"),
+                                "effort",
+                                c(
+                                    "Instämmer inte", 
+                                    "Varken eller",
+                                    "Instämmer",
+                                    "Instämmer absolut"
+                                )
+                            ), 
+                            "effort", "proportion", 
+                            color_var = "effort", 
+                            direction = "laying",
+                            y_limits = c(0,0.6),
+                            color_values = dot_palette(length(unique(dt_eff1_gen[, effort])), type = "diverging")
+                        ) +
+                        theme(
+                            legend.position = "bottom", 
+                            strip.text.y = element_text(angle = 0),
+                            axis.text.y.left = element_blank(),
+                            plot.margin = margin(10,10,10,65)
+                        ) + 
+                        facet_grid(rows = vars(background)) + 
+                        coord_flip()
+                ),
+
+    # Time spent doing homework
+    tar_target(dt_lta11_gen, 
+        load_data_table(file.path("data", "lta11_gen.csv"),
+                        names = c("background", "time", "proportion", "lb", "ub"),
+                        factor_cols = c("background", "time"),
+                        dictionary_cols = c("background")),
+        format = "fst_dt"), 
+    tar_target(p_lta11_gen, dot_plot(
+                            set_level_names(
+                                reverse_sort(dt_lta11_gen, "background"),
+                                "time",
+                                c(
+                                    "Ingen tid", 
+                                    "<1 tim",
+                                    "1 tim",
+                                    "2 tim",
+                                    ">2 tim"
+                                )
+                            ), 
+                            "time", "proportion", 
+                            color_var = "time", 
+                            direction = "laying",
+                            y_limits = c(0,0.6),
+                            color_values = dot_palette(
+                                                length(unique(dt_lta11_gen[, time])), 
+                                                type = "diverging"
+                                            )
+                            ) +
+                        theme(
+                            legend.position = "bottom", 
+                            strip.text.y = element_text(angle = 0),
+                            axis.text.y.left = element_blank(),
+                            plot.margin = margin(10,10,10,15)
+                        ) + 
+                        facet_grid(rows = vars(background)) + 
+                        coord_flip()
+                )
+
+        
 
 )
