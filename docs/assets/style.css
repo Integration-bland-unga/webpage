@@ -100,16 +100,20 @@ h1,h2,h3,h4,h5,h6 {
   color: #ec7a47;
 }
 
-/* OTHER */
 
+
+/* Hide the automatically generated book title */
 h1.title{
   display: none;
 }
 
+/* Figure caption setting */
 p.caption {
   color: #686868;
   margin-top: 10px;
 }
+
+/* Code styling */
 p code {
   white-space: inherit;
 }
@@ -121,12 +125,8 @@ pre code {
   white-space: inherit;
 }
 
-/* Hide font settings and information */
+/* Hide font settings */
 body > div > div.book-body.fixed > div > div.book-header.fixed > div.dropdown.pull-left.font-settings.js-toolbar-action{
-  display: none;
-}
-
-.fa-info {
   display: none;
 }
 
@@ -147,7 +147,6 @@ body > div > div.book-body.fixed > div > div.book-header.fixed > div.dropdown.pu
 
 
 /* HERO IMAGE */
-
 .hero-image-container {
   position: absolute;
   top: 0;
@@ -169,7 +168,6 @@ body > div > div.book-body.fixed > div > div.book-header.fixed > div.dropdown.pu
 
 
 /* Scaling for smaller screen */
-
 @media (max-width: 600px) {
     /* Change header font size */
     h1 {
