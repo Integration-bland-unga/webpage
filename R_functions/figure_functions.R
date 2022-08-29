@@ -111,10 +111,21 @@ dot_plot_theme <- function(font = "Fengardo Neue") {
     library(ggthemes)
 
     return(theme_tufte() %+replace%
-        theme(panel.border = element_rect(colour = "#3f6771", fill = NA, size = 0.2), 
-            text = element_text(family = font, size = 16, color = "#151515"),
-            panel.grid.major = element_line(color = alpha("#3f6771", 0.4),
-                                             size = 0.1),
+        theme(
+            panel.border = element_rect(
+                            colour = "#3f6771", 
+                            fill = NA, 
+                            size = 0.2
+                        ), 
+            text = element_text(
+                        family = font,
+                        size = 16,
+                        color = "#151515"
+                    ),
+            panel.grid.major = element_line(
+                                    color = alpha("#3f6771", 0.4),
+                                    size = 0.1
+                                ),
             legend.title = element_blank(),
             axis.title = element_blank(),
             axis.text = element_text(color = "#151515", size = 14),
@@ -169,40 +180,80 @@ dot_plot <- function(dt, x, y, color_var, breaks = waiver(),
 
     # Initial plot
     p <- ggplot(dt, aes(x = get(x), y = get(y))) +
-            geom_point(color = "black", size = 2.8, pch = 21, fill = alpha("black", 0.0)) +  
-            geom_point(aes(color = get(color_var)), size = 2.6, alpha = 0.7) +
+            # Create point for black outline
+            geom_point(
+                color = "black", 
+                size = 2.8, 
+                pch = 21, 
+                fill = alpha("black", 0.0)
+            ) +  
+            # Create main color point
+            geom_point(
+                aes(color = get(color_var)), 
+                size = 2.6, 
+                alpha = 0.7
+            ) +
+            # Add theme, colors and option for y scale
             dot_plot_theme() +
-            scale_color_manual(values = color_values,
-                                limits = limits) + 
-            scale_y_continuous(labels = labels, breaks = breaks, limits = y_limits)
+            scale_color_manual(
+                values = color_values,
+                limits = limits
+            ) + 
+            scale_y_continuous(
+                labels = labels,
+                breaks = breaks,
+                limits = y_limits
+            )
 
+    # Change grid line look depending on plot direction
     if (direction == "laying"){
         p <- p + theme(
-            panel.grid.major.x = element_blank(),
-            panel.grid.minor.x = element_blank(),
-            panel.grid.major.y = element_line(colour = alpha("#3f6771", 0.6), linetype = "dashed", size = 0.1)
-        )
+                    panel.grid.major.x = element_blank(),
+                    panel.grid.minor.x = element_blank(),
+                    panel.grid.major.y = element_line(
+                                            colour = alpha("#3f6771", 0.6), 
+                                            linetype = "dashed", 
+                                            size = 0.1
+                                        )
+                )
     } else {
         p <- p + theme(
-            panel.grid.major.y = element_blank(),
-            panel.grid.minor.y = element_blank(),
-            panel.grid.major.x = element_line(colour = alpha("#3f6771", 0.6), linetype = "dashed", size = 0.1)
-        )
+                    panel.grid.major.y = element_blank(),
+                    panel.grid.minor.y = element_blank(),
+                    panel.grid.major.x = element_line(
+                                            colour = alpha("#3f6771", 0.6),
+                                            linetype = "dashed",
+                                            size = 0.1
+                                        )
+                )
     }
 
     return(p)
-
 }
 
 line_plot <- function(dt, x, y, group_var = NULL){
     library(ggplot2)
 
     # Initial plot
-    p <- ggplot(dt, aes(x = get(x), y = get(y), group = get(group_var), color = get(group_var))) + 
+    p <- ggplot(
+            dt, 
+            aes(
+                x = get(x),
+                y = get(y),
+                group = get(group_var),
+                color = get(group_var)
+            )
+        ) + 
             geom_line() + 
             dot_plot_theme() +
-            scale_color_manual(values=dot_palette(length(unique(dt[,get(group_var)]))))
-    
+            scale_color_manual(values=dot_palette(
+                                        length(
+                                            unique(
+                                                dt[,get(group_var)]
+                                            )
+                                        )
+                                    )
+                                )
     return(p)
 }
 
@@ -228,7 +279,7 @@ change_crossrefs <- function (file_paths) {
             }
         # Replace figure cross-references for all other pages 
         } else {
-            for (i in 30:1) {
+            for (i in 26:1) {
                 tx <-   gsub(
                             paste0("(Figur\\s.+\">[1-9])", "(\\.",i, ")(<\\/a>)"),
                             paste0("\\1", letters[i], "\\3"),
@@ -278,45 +329,86 @@ gen_figindex <- function (reference_keys, outfile) {
     cat("", file = outfile)
 
     # Page title
-    cat("# Figurindex {-}\n", file = outfile, sep = "\n", append = TRUE)
+    cat(
+        "# Figurindex {-}\n",
+        file = outfile,
+        sep = "\n",
+        append = TRUE
+    )
     
     # Strukturell integration
-    cat("### Strukturell integration {-}\n", file = outfile, sep = "\n", append = TRUE)
+    cat(
+        "### Strukturell integration {-}\n",
+        file = outfile,
+        sep = "\n",
+        append = TRUE
+    )
     
     # Write list of figures
-    gen_figlist(fig_list, 1, 17, 
-                file_path = file.path("bookdown", "01-strukturell_integration.Rmd"), 
-                outfile = outfile)
+    gen_figlist(
+        fig_list, 1, 17, 
+        file_path = file.path("bookdown", "01-strukturell_integration.Rmd"), 
+        outfile = outfile
+    )
 
     # Social integration
-    cat("### Social integration {-}\n", file = outfile, sep = "\n", append = TRUE)
+    cat(
+        "### Social integration {-}\n",
+        file = outfile,
+        sep = "\n",
+        append = TRUE
+    )
 
     # Write list of figures
-    gen_figlist(fig_list, 18, 35, 
-                file_path = file.path("bookdown", "02-social_integration.Rmd"), 
-                outfile = outfile)
+    gen_figlist(
+        fig_list, 18, 35, 
+        file_path = file.path("bookdown", "02-social_integration.Rmd"), 
+        outfile = outfile
+    )
 
     # Kulturell integration
-    cat("### Kulturell integration {-}\n", file = outfile, sep = "\n", append = TRUE)
+    cat(
+        "### Kulturell integration {-}\n",
+        file = outfile,
+        sep = "\n",
+        append = TRUE
+    )
+
     # Write list of figues
-    gen_figlist(fig_list, 36, 59, 
-                file_path = file.path("bookdown", "03-kulturell_integration.Rmd"), 
-                outfile = outfile)
+    gen_figlist(
+        fig_list, 36, 59, 
+        file_path = file.path("bookdown", "03-kulturell_integration.Rmd"), 
+        outfile = outfile
+    )
 
     # Politisk integration
-    cat("### Politisk integration {-}\n", file = outfile, sep = "\n", append = TRUE)
-    # Write list of figures
-    gen_figlist(fig_list, 60, 62, 
-                file_path = file.path("bookdown", "04-politisk_integration.Rmd"), 
-                outfile = outfile)
+    cat(
+        "### Politisk integration {-}\n",
+        file = outfile,
+        sep = "\n",
+        append = TRUE
+    )
 
+    # Write list of figures
+    gen_figlist(
+        fig_list, 60, 62, 
+        file_path = file.path("bookdown", "04-politisk_integration.Rmd"), 
+        outfile = outfile
+    )
 
     # Adaption
-    cat("### Adaption, framtidstro och hälsa{-}\n", file = outfile, sep = "\n", append = TRUE)
+    cat(
+        "### Adaption, framtidstro och hälsa{-}\n",
+        file = outfile,
+        sep = "\n",
+        append = TRUE
+        )
     # Write list of figures 
-    gen_figlist(fig_list, 63, 72, 
-                file_path = file.path("bookdown", "05-framtidstro.Rmd"), 
-                outfile = outfile)
+    gen_figlist(
+        fig_list, 63, 72, 
+        file_path = file.path("bookdown", "05-framtidstro.Rmd"),
+        outfile = outfile
+    )
 
     return(outfile)
 }
