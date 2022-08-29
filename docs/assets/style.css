@@ -125,8 +125,12 @@ pre code {
   white-space: inherit;
 }
 
-/* Hide font settings */
+/* Hide font settings and nav-bar header */
 body > div > div.book-body.fixed > div > div.book-header.fixed > div.dropdown.pull-left.font-settings.js-toolbar-action{
+  display: none;
+}
+
+body > div > div.book-body.fixed > div > div.book-header.fixed > h1 {
   display: none;
 }
 

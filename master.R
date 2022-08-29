@@ -36,3 +36,10 @@ change_crossrefs(
         file.path("docs", "figurindex.html")
     )
 )
+
+# Add modified plugin-bookdown.js
+file.copy(
+    from = file.path("bookdown", "plugin-bookdown.js"),
+    to = file.path("docs", "libs", "gitbook-2.6.7", "js", "plugin-bookdown.js"),
+    overwrite = TRUE
+)
