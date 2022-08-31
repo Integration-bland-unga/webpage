@@ -15,7 +15,7 @@ list(
                                         names = c("age", "background", "proportion", "lb", "ub"),
                                         dictionary_cols = c("background", "age"), 
                                         factor_cols = c("background", "age")), format = "fst_dt"),
-    tar_target(p_f1d1, dot_plot(dt_f1d1, "background", "proportion", color_var = "background", 
+    tar_target(p_f1d1, bar_plot(dt_f1d1, "background", "proportion", color_var = "background", 
                                 breaks = seq(0,1,0.1), direction = "laying") + 
                                 theme(strip.text.y.left = element_text(angle = 0), 
                                         axis.text.y = element_blank(),
@@ -28,7 +28,7 @@ list(
                                         dictionary_cols = c("background"),
                                         factor_cols = c("background", "response")),
                 format = "fst_dt"),
-    tar_target(p_f1d2, dot_plot(dt_f1d2, "age", "proportion", color_var = "response", 
+    tar_target(p_f1d2, bar_plot(dt_f1d2, "age", "proportion", color_var = "response", 
                                 breaks = seq(0,1,0.1),
                                 color_values = dot_palette(length(unique(dt_f1d2[,response])), type = "diverging")) + 
                                 facet_grid(cols = vars(background))),
@@ -40,7 +40,7 @@ list(
     tar_target(dt_famtyp_orig, load_data_table(file.path("data", "f5_1_famtyp_orig.csv"),
                                                 names = c("origin", "family_type", "proportion", "lb", "ub"),
                                                 factor_cols = c("origin", "family_type")), format = "fst_dt"),
-    tar_target(p_famtyp_orig, dot_plot(dt_famtyp_orig, "origin", "proportion", color_var ="family_type") + 
+    tar_target(p_famtyp_orig, bar_plot(dt_famtyp_orig, "origin", "proportion", color_var ="family_type") + 
                                 theme(axis.text.x = element_text(angle = 45, vjust = 0.7))),
 
     # Joint physical custody
@@ -49,7 +49,7 @@ list(
                                             dictionary_cols = "background",
                                             factor_cols = c("grouping", "background")),
                 format = "fst_dt"),
-    tar_target(p_vaxbo, dot_plot(dt_vaxbo, "background", "proportion", color_var ="background",
+    tar_target(p_vaxbo, bar_plot(dt_vaxbo, "background", "proportion", color_var ="background",
                                 direction = "laying", color_values = c(dot_palette(3), dot_palette(6))) + 
                                 theme(strip.text.y = element_blank(), legend.position="none") +
                                 facet_grid(rows = vars(grouping), scales = "free", space = "free") + coord_flip()),
@@ -59,20 +59,31 @@ list(
                                             names = c("measure", "background", "value", "lb", "ub"),
                                             dictionary_cols = "background",
                                             factor_cols = c("measure", "background")), format ="fst_dt"),
-    tar_target(p_famindex, dot_plot(dt_famindex[, value := value * 100], "background", "value", color_var = "background",
-                                    direction = "laying", labels = waiver(), breaks = seq(0,100,10)) + 
-                                    theme(strip.text.y.left = element_text(angle = 0, hjust = 1 ), 
-                                        axis.text.y = element_blank(),
-                                        axis.ticks.y = element_blank(),
-                                        legend.position="bottom") + ylim(20,100) +
-                                    facet_grid(rows = vars(measure), switch = "both") + coord_flip()),
+    tar_target(p_famindex, bar_plot(
+                                dt_famindex[, ':='(
+                                                value = value * 100,
+                                                lb = lb * 100,
+                                                ub = ub * 100
+                                                )], 
+                                "background", "value", 
+                                color_var = "background",
+                                direction = "laying", 
+                                labels = waiver(), 
+                                breaks = seq(0,100,10), 
+                                y_limits = c(0,100)
+                            ) + 
+                            theme(strip.text.y.left = element_text(angle = 0, hjust = 1 ), 
+                                axis.text.y = element_blank(),
+                                axis.ticks.y = element_blank(),
+                                legend.position="bottom") +
+                            facet_grid(rows = vars(measure), switch = "both") + coord_flip()),
 
     # Foreign background friends
     tar_target(dt_avg_foregin_friends, load_data_table(file.path("data", "f5_4_fimm_gen_kon_share.csv"),
                                                         names = c("gender", "background", "proportion", "lb", "ub"),
                                                         dictionary_cols = "background",
                                                         factor_cols = c("gender", "background")), format = "fst_dt"),
-    tar_target(p_avg_foreign_friends, dot_plot(dt_avg_foregin_friends, "background", "proportion", color_var = "background", direction = "laying") +
+    tar_target(p_avg_foreign_friends, bar_plot(dt_avg_foregin_friends, "background", "proportion", color_var = "background", direction = "laying") +
                                         facet_grid(rows = vars(gender)) + 
                                         theme(legend.position = "bottom", strip.text.y = element_text(angle = 0)) +
                                         coord_flip()),
@@ -84,7 +95,7 @@ list(
                                 dictionary_cols = c("background", "composition"),
                                 factor_cols = c("gender", "composition", "background")), format = "fst_dt"),
     tar_target(p_avg_foreign_friends_by_percentage_gen1, 
-                dot_plot(dt_avg_foreign_friends_by_percentage_gen1, "composition", "proportion", color_var = "background", 
+                bar_plot(dt_avg_foreign_friends_by_percentage_gen1, "composition", "proportion", color_var = "background", 
                         breaks = seq(0,1,0.1)) + 
                         facet_grid(cols = vars(gender)) + 
                         theme(axis.text.x = element_text(size = 12),
@@ -107,7 +118,7 @@ list(
                                 dictionary_cols = c("background"),
                                 factor_cols = c("gender", "partner", "background")), format = "fst_dt"),
     tar_target(p_ak9_partner, 
-                dot_plot(dt_ak9_partner, "background", "proportion", color_var = "partner", 
+                bar_plot(dt_ak9_partner, "background", "proportion", color_var = "partner", 
                         breaks = seq(0,1,0.1)) + 
                         facet_grid(cols = vars(gender)) + 
                         theme(axis.text.x = element_text(size = 13),
@@ -118,7 +129,7 @@ list(
                                                             names = c("gender", "background", "index", "lb", "ub"),
                                                             dictionary_cols = "background",
                                                             factor_cols = c("gender", "background")), format = "fst_dt"),
-    tar_target(p_social_gender_background, dot_plot(dt_social_gender_background, "background", "index", 
+    tar_target(p_social_gender_background, bar_plot(dt_social_gender_background, "background", "index", 
                                                     color_var = "background", direction = "laying", labels = waiver()) +
                                         facet_grid(rows = vars(gender)) + 
                                         theme(legend.position = "bottom", strip.text.y = element_text(angle = 0)) +
@@ -140,7 +151,7 @@ list(
                                                         names = c("gender", "background", "mean", "lb", "ub"),
                                                         dictionary_cols = "background",
                                                         factor_cols = c("gender", "background")), format = "fst_dt"),
-    tar_target(p_club_foreign, dot_plot(dt_club_foreign, "background", "mean", color_var = "background", direction = "laying",
+    tar_target(p_club_foreign, bar_plot(dt_club_foreign, "background", "mean", color_var = "background", direction = "laying",
                                         labels = c("Aldrig", "Mer sällan", "Varje månad", "Varje vecka", "Varje dag"), 
                                         breaks = c(0,1,2,3,4), y_limits = c(0,4)) +
                                         facet_grid(rows = vars(gender)) + 
@@ -153,7 +164,7 @@ list(
                                                         dictionary_cols = c("background", "composition"),
                                                         factor_cols = c("gender", "background", "composition")), format = "fst_dt"),
    
-    tar_target(p_victim, dot_plot(dt_victim, "composition", "mean", color_var = "composition",
+    tar_target(p_victim, bar_plot(dt_victim, "composition", "mean", color_var = "composition",
                                         labels = c("Aldrig", "En ibland (11)", "Två ibland (22)"),
                                         breaks = c(0,0.11,0.22), y_limits = c(0,0.25),
                                         color_values = dot_palette(length(unique(dt_victim[,composition])), type = "diverging")) + 
@@ -177,7 +188,7 @@ list(
                                                         names = c("origin", "category", "mean", "lb", "ub"),
                                                         factor_cols = c("origin", "category"))[, place := "Av polis och väktare"]  
                         ), format = "fst_dt"),
-    tar_target(p_f5_18, dot_plot(set_level_names(
+    tar_target(p_f5_18, bar_plot(set_level_names(
                                     reverse_sort(dt_f5_18, "place"), "category", c("Ofta/Alltid", "Ibland", "Aldrig")), 
                                     "origin", "mean",
                                     color_var = "category",
@@ -191,7 +202,7 @@ list(
                                                 names = c("origin", "frequency", "proportion", "lb", "ub"),
                                                 factor_cols = c("origin", "frequency"),
                                                 dictionary_cols = "frequency"), format = "fst_dt"),
-    tar_target(p_discrimination_orig, dot_plot(dt_discrimination_orig, "origin", "proportion", 
+    tar_target(p_discrimination_orig, bar_plot(dt_discrimination_orig, "origin", "proportion", 
                                                 color_var ="frequency", y_limits = c(0,0.6),
                                                 color_values = dot_palette(length(unique(dt_discrimination_orig[,frequency])), type = "diverging")) + 
                                 theme(axis.text.x = element_text(angle = 45, vjust = 0.7))),
@@ -203,7 +214,7 @@ list(
                                                                                         frequency == 2, frequency := "En/flera gånger\ni månaden"][
                                                                                         frequency == 3, frequency := "Mer sällan"][
                                                                                         frequency == 4, frequency := "Aldrig"], format = "fst_dt"),
-    tar_target(p_discrimination_ethn, dot_plot(dt_discrimination_ethn, "origin", "proportion", 
+    tar_target(p_discrimination_ethn, bar_plot(dt_discrimination_ethn, "origin", "proportion", 
                                                 color_var ="frequency", y_limits = c(0,1),
                                                 color_values = dot_palette(length(unique(dt_discrimination_ethn[,frequency])), type = "diverging")) + 
                                 theme(axis.text.x = element_text(angle = 45, vjust = 0.7))),
@@ -218,7 +229,7 @@ list(
                                                 factor_cols = c("ethnicity", "attitude"))[, background := "Utländsk bakgrund"]
                         ), 
                 format = "fst_dt"),
-    tar_target(p_f5_21, dot_plot(dt_f5_21, "ethnicity", "proportion", 
+    tar_target(p_f5_21, bar_plot(dt_f5_21, "ethnicity", "proportion", 
                                                 color_var ="attitude", 
                                                 y_limits = c(0,1),
                                                 direction = "laying",
@@ -242,7 +253,7 @@ list(
                                 factor_cols = c("background", "category")),
                 format = "fst_dt"),
     tar_target(p_identification_gen, 
-                dot_plot(dt_identification_gen[,category := forcats::fct_rev(category)], 
+                bar_plot(dt_identification_gen[,category := forcats::fct_rev(category)], 
                         "background", "proportion", color_var = "category", 
                         breaks = seq(0,1,0.1),
                         color_values = rev(dot_palette(length(unique(dt_identification_gen[,category])), type = "diverging")))),
@@ -250,12 +261,12 @@ list(
     # Identification by origin
     tar_target(dt_identification_orig, 
                 load_data_table(file.path("data", "f6_2_id_gen_origmax.csv"),
-                                names = c("background", "generation", "category", "proportion", "ls", "ub"),
+                                names = c("background", "generation", "category", "proportion", "lb", "ub"),
                                 dictionary_cols = c("background", "category", "generation"),
                                 factor_cols = c("background", "category", "generation")),
                 format = "fst_dt"),
     tar_target(p_identification_orig, 
-                dot_plot(reverse_sort(dt_identification_orig, "generation"), 
+                bar_plot(reverse_sort(dt_identification_orig, "generation"), 
                         "generation", "proportion", color_var = "category", 
                         direction = "laying", breaks = seq(0,1,0.1),
                         color_values = dot_palette(length(unique(dt_identification_orig[,category])), type = "diverging")) +
@@ -269,7 +280,7 @@ list(
                                                         dictionary_cols = c("background", "age", "category"),
                                                         factor_cols = c("background", "category", "age")), format = "fst_dt"),
     tar_target(p_identification_age, 
-            dot_plot(reverse_sort(dt_identification_age, "age"), 
+            bar_plot(reverse_sort(dt_identification_age, "age"), 
                     "age", "proportion", color_var = "category", 
                     direction = "laying", breaks = seq(0, 1, 0.2),
                     y_limits = c(0,1),
@@ -284,7 +295,7 @@ list(
                                                         dictionary_cols = c("background", "age"),
                                                         factor_cols = c("background", "category", "age")), format = "fst_dt"), 
     tar_target(p_identification_other_age, 
-            dot_plot(reverse_sort(dt_identification_other_age, "age"), 
+            bar_plot(reverse_sort(dt_identification_other_age, "age"), 
                     "age", "proportion", color_var = "category", 
                     direction = "laying", breaks = seq(0, 1, 0.2),
                     y_limits = c(0, 1),
@@ -300,7 +311,7 @@ list(
                                                         factor_cols = c("origin", "category", "age")), 
                 format = "fst_dt"),
     tar_target(p_identification_other_age_origin, 
-            dot_plot(reverse_sort(dt_identification_other_age_origin, "age"), 
+            bar_plot(reverse_sort(dt_identification_other_age_origin, "age"), 
                     "age", "proportion", color_var = "category", 
                     direction = "laying", breaks = seq(0, 0.8, 0.2),
                     y_limits = c(0, 0.8),
@@ -319,7 +330,7 @@ list(
                                     c("Ingen", "Annan", "Svensk", "Svensk och annan")),
                 format = "fst_dt"),
     tar_target(p_f6_6, 
-            dot_plot(reverse_sort(dt_f6_6, "age"), 
+            bar_plot(reverse_sort(dt_f6_6, "age"), 
                     "age", "proportion", color_var = "category", 
                     direction = "laying", breaks = seq(0, 1, 0.2),
                     y_limits = c(0, 1),
@@ -339,7 +350,7 @@ list(
                                     c("Ingen", "Annan", "Svensk", "Svensk och annan")),
                 format = "fst_dt"),
     tar_target(p_f6_7, 
-            dot_plot(reverse_sort(dt_f6_7, "age"), 
+            bar_plot(reverse_sort(dt_f6_7, "age"), 
                     "age", "proportion", color_var = "category", 
                     direction = "laying", breaks = seq(0, 1, 0.2),
                     y_limits = c(0, 0.6),
@@ -354,7 +365,7 @@ list(
                                                         dictionary_cols = c("background"),
                                                         factor_cols = c("background")), 
                 format = "fst_dt"),
-    tar_target(p_swedish_skills, dot_plot(dt_swedish_skills, "background", "score", color_var = "category",
+    tar_target(p_swedish_skills, bar_plot(dt_swedish_skills, "background", "score", color_var = "category",
                                             labels = waiver(), y_limits = c(0,100)) +
                                     theme(legend.position = "bottom", 
                                             plot.margin = margin(10, 10, 10, 10))),
@@ -365,7 +376,7 @@ list(
                                 factor_cols = c("background", "religion")),
                 format = "fst_dt"),
     tar_target(p_religion_background, 
-                dot_plot(dt_religion_background, 
+                bar_plot(dt_religion_background, 
                         "background", "proportion", 
                         color_var = "religion", 
                         breaks = seq(0,1,0.1),
@@ -378,7 +389,7 @@ list(
                                 factor_cols = c("origin", "religion")),
                 format = "fst_dt"),
     tar_target(p_religion_origin, 
-                dot_plot(dt_religion_origin, 
+                bar_plot(dt_religion_origin, 
                         "origin", "proportion", color_var = "religion", breaks = seq(0,1,0.1))+
                 theme(axis.text.x = element_text(angle = 45, vjust = 0.7))),
 
@@ -389,7 +400,7 @@ list(
                                 factor_cols = c("background", "importance")),
                 format = "fst_dt"),
     tar_target(p_religion_importance_background, 
-                dot_plot(dt_religion_importance_background, 
+                bar_plot(dt_religion_importance_background, 
                         "background", "proportion", 
                         color_var = "importance",
                         color_values = dot_palette(length(unique(dt_religion_importance_background[,importance])), type = "diverging"),
@@ -402,7 +413,7 @@ list(
                                 factor_cols = c("origin", "importance")),
                 format = "fst_dt"),
     tar_target(p_religion_importance_origin, 
-                dot_plot(dt_religion_importance_origin, 
+                bar_plot(dt_religion_importance_origin, 
                         "origin", "proportion", 
                         color_var = "importance",
                         color_values = dot_palette(length(unique(dt_religion_importance_origin[,importance])), type = "diverging"),
@@ -417,7 +428,7 @@ list(
                                 dictionary_cols = c("background")),
                 format = "fst_dt"),
     tar_target(p_religion_importance_bgrel, 
-                dot_plot(dt_religion_importance_bgrel[!(background == "Svenskfödda" & religion == "Muslim")], 
+                bar_plot(dt_religion_importance_bgrel[!(background == "Svenskfödda" & religion == "Muslim")], 
                         "religion", "proportion", 
                         color_var = "importance",
                         color_values = dot_palette(length(unique(dt_religion_importance_bgrel[,importance])), type = "diverging"),
@@ -432,7 +443,7 @@ list(
                                 dictionary_cols = c("generation")),
                 format = "fst_dt"),
     tar_target(p_f6_14, 
-                dot_plot(dt_f6_14, 
+                bar_plot(dt_f6_14, 
                         "generation", "proportion", 
                         color_var = "importance",
                         color_values = dot_palette(length(unique(dt_f6_14[,importance])), type = "diverging"),
@@ -460,7 +471,7 @@ list(
                                                             dictionary_cols = "background",
                                                             factor_cols = c("issue","gender", "background")), format = "fst_dt"),
     tar_target(p_family_attitudes_genderbg, 
-                dot_plot(dt_family_attitudes_genderbg, "gender", "proportion", color_var = "background", 
+                bar_plot(dt_family_attitudes_genderbg, "gender", "proportion", color_var = "background", 
                         breaks = seq(0,1,0.1)) + 
                         facet_grid(cols = vars(issue)) + 
                         theme(axis.text.x = element_text(size = 13),
@@ -473,7 +484,7 @@ list(
                                                             dictionary_cols = "origin",
                                                             factor_cols = c("issue","origin")), format = "fst_dt"),
     tar_target(p_family_attitudes_origin, 
-                dot_plot(dt_family_attitudes_origin, "issue", "proportion", color_var = "origin", 
+                bar_plot(dt_family_attitudes_origin, "issue", "proportion", color_var = "origin", 
                         breaks = seq(0,1,0.1))),
 
     # Family attitudes over age
@@ -492,7 +503,7 @@ list(
                                                             dictionary_cols = "background",
                                                             factor_cols = c("issue","gender", "background")), format = "fst_dt"),
     tar_target(p_gender_attitudes_genderbg, 
-                dot_plot(dt_gender_attitudes_genderbg, "gender", "proportion", color_var = "background", 
+                bar_plot(dt_gender_attitudes_genderbg, "gender", "proportion", color_var = "background", 
                         breaks = seq(0,1,0.1)) + 
                         facet_grid(cols = vars(issue)) + 
                         theme(axis.text.x = element_text(size = 13),
@@ -505,7 +516,7 @@ list(
                                                             dictionary_cols = "origin",
                                                             factor_cols = c("issue","origin")), format = "fst_dt"),
     tar_target(p_gender_attitudes_origin, 
-                dot_plot(dt_gender_attitudes_origin, "issue", "proportion", color_var = "origin", 
+                bar_plot(dt_gender_attitudes_origin, "issue", "proportion", color_var = "origin", 
                         breaks = seq(0,1,0.1), y_limits = c(0,0.7)) + 
                 theme(axis.text.x = element_text(size = 13), legend.position="bottom") + 
                 guides(color = guide_legend(nrow = 2, byrow = TRUE))),
@@ -532,7 +543,7 @@ list(
                                                             dictionary_cols = "background",
                                                             factor_cols = c("issue","gender", "background")), format = "fst_dt"),
     tar_target(p_violence_attitudes_genderbg, 
-                dot_plot(dt_violence_attitudes_genderbg, "gender", "proportion", color_var = "background", 
+                bar_plot(dt_violence_attitudes_genderbg, "gender", "proportion", color_var = "background", 
                         breaks = seq(0,1,0.1)) + 
                         facet_grid(cols = vars(issue)) + 
                         theme(axis.text.x = element_text(size = 13),
@@ -545,7 +556,7 @@ list(
                                                             names = c("issue", "gender", "origin", "proportion", "lb", "ub"),
                                                             factor_cols = c("issue","gender", "origin")), format = "fst_dt"),
     tar_target(p_violence_attitudes_origin, 
-                dot_plot(dt_violence_attitudes_origin, "gender", "proportion", color_var = "origin", 
+                bar_plot(dt_violence_attitudes_origin, "gender", "proportion", color_var = "origin", 
                         breaks = seq(0,1,0.1)) + 
                         facet_grid(cols = vars(issue)) + 
                         theme(axis.text.x = element_text(size = 13),
@@ -561,7 +572,7 @@ list(
                                                                                         10:12, statement := "swe_keep"], 
                 format = "fst_dt"),
     tar_target(p_integration_attitudes_background, 
-                    dot_plot(dt_integration_attitudes_background, 
+                    bar_plot(dt_integration_attitudes_background, 
                             "statement", "proportion", color_var = "background", 
                             breaks = seq(0,1,0.2), y_limits = c(0,0.8), direction = "laying", limits = c("SVF", "Gen 2", "Gen 1")) + 
                             scale_x_discrete(labels = dictionary(c("imm_adapt", "imm_keep", "swe_open", "swe_keep"))) +
@@ -582,7 +593,7 @@ list(
                                                                                         origin == 4, origin := "NVS Europa"][
                                                                                         origin == 5 , origin := "Svenskfödda"]),
     tar_target(p_integration_attitudes_origin, 
-                dot_plot(dt_integration_attitudes_origin[, origin := forcats::fct_rev(origin)],
+                bar_plot(dt_integration_attitudes_origin[, origin := forcats::fct_rev(origin)],
                         "origin", "proportion", color_var = "origin", direction = "laying", breaks = seq(0,1,0.1),
                         limits = c("Svenskfödda",                                                                            
                                     "NVS Europa",
@@ -605,7 +616,7 @@ list(
     tar_target(dt_discuss_pol, load_data_table(file.path("data", "f7_1_comm_gen.csv"),
                                                 names = c("background", "frequency", "proportion", "lb", "ub"),
                                                 factor_cols = c("background", "frequency")), format = "fst_dt"),
-    tar_target(p_discuss_pol, dot_plot(dt_discuss_pol, "background", "proportion", 
+    tar_target(p_discuss_pol, bar_plot(dt_discuss_pol, "background", "proportion", 
                                         color_var ="frequency",
                                         color_values = dot_palette(length(unique(dt_discuss_pol[,frequency])), type = "diverging"))),
 
@@ -625,7 +636,7 @@ list(
                                             names = c("type", "background", "value", "lb", "ub"),
                                             dictionary_cols = "background",
                                             factor_cols = c("type", "background")), format ="fst_dt"),
-    tar_target(p_soc_engage, dot_plot(dt_soc_engage, "background", "value", color_var = "background",
+    tar_target(p_soc_engage, bar_plot(dt_soc_engage, "background", "value", color_var = "background",
                                     direction = "laying", breaks = seq(0,1,0.1), y_limits = c(0, 0.5)) + 
                                     theme(strip.text.y.left = element_text(angle = 0, hjust = 1 ), 
                                         axis.text.y = element_blank(),
@@ -641,7 +652,7 @@ list(
                                             names = c("group", "background", "value", "lb", "ub"),
                                             dictionary_cols = "background",
                                             factor_cols = c("group", "background")), format ="fst_dt"),
-    tar_target(p_internalising, dot_plot(dt_internalising, "background", "value", color_var = "background",
+    tar_target(p_internalising, bar_plot(dt_internalising, "background", "value", color_var = "background",
                                     direction = "laying",
                                     color_values = c(dot_palette(3), dot_palette(6), dot_palette(2))) + 
                                     theme(strip.text.y = element_blank(), legend.position="none") + ylim(0,1) +
@@ -664,7 +675,7 @@ list(
                                             names = c("group", "background", "proportion", "lb", "ub"),
                                             dictionary_cols = "background",
                                             factor_cols = c("group", "background")), format ="fst_dt"),
-    tar_target(p_f8_3, dot_plot(dt_f8_3[, proportion := proportion/100], "background", "proportion", color_var = "background",
+    tar_target(p_f8_3, bar_plot(dt_f8_3[, proportion := proportion/100], "background", "proportion", color_var = "background",
                                     direction = "laying", y_limits = c(0, 0.3),
                                     color_values = c(dot_palette(3), dot_palette(6), dot_palette(2))) + 
                                     theme(strip.text.y = element_blank(), legend.position="none") +
@@ -675,7 +686,7 @@ list(
                                         names = c("background", "category", "proportion", "lb", "ub"),
                                         dictionary_cols = c("background"), 
                                         factor_cols = c("background", "category")), format = "fst_dt"),
-    tar_target(p_f8_4, dot_plot(dt_f8_4, "category", "proportion", color_var = "category", 
+    tar_target(p_f8_4, bar_plot(dt_f8_4, "category", "proportion", color_var = "category", 
                                 breaks = seq(0,1,0.1), direction = "laying", y_limits = c(0, 0.4)) + 
                                 theme(strip.text.y.left = element_text(angle = 0), 
                                         axis.text.y = element_blank(),
@@ -702,7 +713,7 @@ list(
                             dictionary_cols = c("background")),
             format = "fst_dt"),
 
-    tar_target(p_f8_6, dot_plot(reverse_sort(dt_f8_6, "background"), "background", "proportion", color_var ="importance",
+    tar_target(p_f8_6, bar_plot(reverse_sort(dt_f8_6, "background"), "background", "proportion", color_var ="importance",
                             direction = "laying",
                             color_values = rev(dot_palette(length(unique(dt_f8_6[,importance])), type = "diverging"))) + 
                             theme(strip.text.y = element_blank(), 
@@ -735,7 +746,7 @@ list(
                                                 "response",
                                                 c("Nej", "Vet inte", "Ja"))),
 
-    tar_target(p_f8_7, dot_plot(reverse_sort(dt_f8_7, "background"), "background", "proportion", 
+    tar_target(p_f8_7, bar_plot(reverse_sort(dt_f8_7, "background"), "background", "proportion", 
                                         color_var = "response",
                                         color_values = dot_palette(length(unique(dt_f8_7[,response])), type = "diverging"),
                                         direction = "laying") +
@@ -751,7 +762,7 @@ list(
                             dictionary_cols = c("background")),
             format = "fst_dt"),
 
-    tar_target(p_f8_8, dot_plot(reverse_sort(dt_f8_8, "background"), "background", "proportion", color_var ="satisfaction",
+    tar_target(p_f8_8, bar_plot(reverse_sort(dt_f8_8, "background"), "background", "proportion", color_var ="satisfaction",
                             direction = "laying", 
                             color_values = dot_palette(length(unique(dt_f8_8[,satisfaction])), type = "diverging")) + 
                             theme(strip.text.y = element_blank(), 
@@ -765,7 +776,7 @@ list(
                             "5-7" = c("5", "6", "7"), 
                             "8 - 10 Mycket nöjd" = c("8", "9", "10 Mycket nöjd")
                         )][, proportion_c := sum(proportion), .(satisfaction_c, background, category)]),
-    tar_target(p_f8_8b, dot_plot(
+    tar_target(p_f8_8b, bar_plot(
                             reverse_sort(dt_f8_8b, "background"), 
                             "background", "proportion_c", 
                             color_var ="satisfaction_c",
@@ -787,7 +798,7 @@ list(
                             dictionary_cols = c("background")),
             format = "fst_dt"),                 
 
-    tar_target(p_f8_9, dot_plot(reverse_sort(dt_f8_9, "background"), "background", "proportion", color_var = "health", direction = "laying",
+    tar_target(p_f8_9, bar_plot(reverse_sort(dt_f8_9, "background"), "background", "proportion", color_var = "health", direction = "laying",
                                 color_values = dot_palette(length(unique(dt_f8_9[, health])), type = "diverging")) +
                                         facet_grid(rows = vars(gender)) + 
                                         theme(legend.position = "bottom", 
@@ -804,7 +815,7 @@ list(
                         factor_cols = c("background", "education"),
                         dictionary_cols = c("background")),
         format = "fst_dt"), 
-    tar_target(p_fb4_5, dot_plot(
+    tar_target(p_fb4_5, bar_plot(
                             set_level_names(
                                 reverse_sort(dt_fb4_5, "background"),
                                 "education",
@@ -832,7 +843,7 @@ list(
                         factor_cols = c("background", "effort"),
                         dictionary_cols = c("background")),
         format = "fst_dt"), 
-    tar_target(p_eff1_gen, dot_plot(
+    tar_target(p_eff1_gen, bar_plot(
                             set_level_names(
                                 reverse_sort(dt_eff1_gen, "background"),
                                 "effort",
@@ -866,7 +877,7 @@ list(
                         factor_cols = c("background", "time"),
                         dictionary_cols = c("background")),
         format = "fst_dt"), 
-    tar_target(p_lta11_gen, dot_plot(
+    tar_target(p_lta11_gen, bar_plot(
                             set_level_names(
                                 reverse_sort(dt_lta11_gen, "background"),
                                 "time",

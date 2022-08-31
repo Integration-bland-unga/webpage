@@ -81,6 +81,10 @@ load_data_table <- function(f_path, names, dictionary_cols = NULL,
         }
     }
 
+    # Cap CI
+    dt[lb <= 0, lb := 0]
+    dt[ub >= 100 & "proportion" %in% colnames(dt), ub := 100]
+
     return(dt)
 
 }
@@ -180,18 +184,27 @@ dot_plot <- function(dt, x, y, color_var, breaks = waiver(),
 
     # Initial plot
     p <- ggplot(dt, aes(x = get(x), y = get(y))) +
-            # Create point for black outline
-            geom_point(
+            # Add errorbar
+            geom_linerange(
+                aes(ymin = lb, ymax = ub, group = get(color_var)),
+                color = "#444444",
+                alpha = 0.3,
+                position = position_dodge(width = 0.5)
+            ) + 
+            #Create point for black outline
+            geom_point(aes(group = get(color_var)),
                 color = "black", 
                 size = 2.8, 
                 pch = 21, 
-                fill = alpha("black", 0.0)
-            ) +  
+                fill = alpha("black", 0.0),
+                position = position_dodge(width = 0.5)
+            ) + 
             # Create main color point
             geom_point(
                 aes(color = get(color_var)), 
                 size = 2.6, 
-                alpha = 0.7
+                alpha = 0.7,
+                position = position_dodge(width = 0.5)
             ) +
             # Add theme, colors and option for y scale
             dot_plot_theme() +
@@ -411,4 +424,84 @@ gen_figindex <- function (reference_keys, outfile) {
     )
 
     return(outfile)
+}
+
+
+##########
+
+
+# Main plotting function for dot_plots
+bar_plot <- function(dt, x, y, color_var, breaks = waiver(), 
+                    direction = "standing", y_limits = NULL, limits = NULL,
+                    labels = scales::label_percent(accuracy = 1), 
+                    color_values = dot_palette(length(unique(dt[,get(color_var)])))){
+    library(ggplot2)
+    library(forcats)
+ 
+    # # Reverse factor for plot layout for laying plots
+    if (direction == "laying"){
+        
+        # Reverse factor for legend and axis order and set color limits
+        if (x == color_var) {
+            dt[, (x) := fct_rev(get(x))]
+        } else if (x != color_var) {
+            dt[, (color_var) := fct_rev(get(color_var))]
+        }
+        # Set color limits
+        if (class(limits) == "NULL") {
+            limits <- unique(dt[,get(color_var)])
+        }
+    }
+
+    # Initial plot
+    p <- ggplot(dt, aes(x = get(x), y = get(y), fill = get(color_var))) +
+            # Create bar
+            geom_bar( 
+                stat = "identity",
+                position = position_dodge(),
+                alpha = 0.8,
+            ) +
+            # Add errorbar
+            geom_linerange(
+                aes(ymin = lb, ymax = ub, group = get(color_var)),
+                color = "#444444",
+                alpha = 0.5,
+                position = position_dodge(0.9)
+            ) + 
+            # Add theme, colors and option for y scale
+            dot_plot_theme() +
+            scale_fill_manual(
+                values = color_values,
+                limits = limits
+            ) + 
+            scale_y_continuous(
+                labels = labels,
+                breaks = breaks,
+                limits = y_limits
+            )
+
+    # Change grid line look depending on plot direction
+    if (direction == "laying"){
+        p <- p + theme(
+                    panel.grid.major.y = element_blank(),
+                    panel.grid.minor.y = element_blank(),
+                    panel.grid.major.x = element_line(
+                                            colour = alpha("#3f6771", 0.6), 
+                                            linetype = "dashed", 
+                                            size = 0.1
+                                        )
+                )
+    } else {
+        p <- p + theme(
+                    panel.grid.major.x = element_blank(),
+                    panel.grid.minor.x = element_blank(),
+                    panel.grid.major.y = element_line(
+                                            colour = alpha("#3f6771", 0.6),
+                                            linetype = "dashed",
+                                            size = 0.1
+                                        )
+                )
+    }
+
+    return(p)
 }

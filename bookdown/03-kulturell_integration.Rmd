@@ -96,7 +96,7 @@ För att komplettera ovanstående om hur religiositet förändras över tid kan 
 tar_read(p_religiosity_age)
 ```
 
-## Värdering och attityder {-}
+## Värderingar och attityder {-}
 
 ### Attityder till familj och sexualitet {-}
 

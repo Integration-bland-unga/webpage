@@ -106,7 +106,7 @@ I Figur \@ref(fig:f4-14) sammanfattas hur förändringen i sysselsättning för 
 knitr::include_graphics(file.path("assets", "images", "strukturell" ,"4_14_syss 2-11.png"))
 ```
 
-En förklaring till skillnaderna i andelen etablerade på arbetsmarknaden är utbildningsaspirationer. De grupper där många har gått över till universitet och högskole har också en lägre andel etablerade på arbetsmarknaden och i både generation 1 och 2 är andelen som studerar på denna nivå högre än bland unga med svensk bakgrund. 
+En förklaring till skillnaderna i andelen etablerade på arbetsmarknaden är utbildningsaspirationer. De grupper där många har gått över till universitet och högskola har också en lägre andel etablerade på arbetsmarknaden och i både generation 1 och 2 är andelen som studerar på denna nivå högre än bland unga med svensk bakgrund. 
 
 Bland unga som invandrat relativt sent är andelen som studerar på gymnasienivå när många jämnåriga tagit studenten hög. Andelen krymper dock kraftigt över tid.
 

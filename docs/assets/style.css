@@ -11,6 +11,15 @@
 }
 
 @font-face {
+  font-family: 'happytimes';
+  src: url('fonts/happytimes/happy-times_regular.woff2') format('woff2'),
+       url('fonts/happytimes/happy-times_regular.woff') format('woff'),
+       url('fonts/happytimes/happy-times_regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Fengardo Neue';
   src: url('fonts/fengardoneue/fengardoneue_regular-webfont.eot');
   src: url('fonts/fengardoneue/fengardoneue_regular-webfont.woff') format('woff'),
@@ -33,7 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background: #ffffff;
   color: #151515;
-  font-family: "minipax", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: "happytimes", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: 500;
 }
 
@@ -63,7 +72,7 @@ div[class='section level1 unnumbered']{
   }
   
 .book.font-family-1 {
-  font-family: "minipax", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: "happytimes", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 
@@ -83,7 +92,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .summary {
-  font-family: 'minipax';
+  font-family: 'happytimes';
 }
 
 .book .book-summary ul.summary li a, 
