@@ -11,10 +11,15 @@ list(
     # Structural integration
         
     # Cash margin
-    tar_target(dt_f1d1, load_data_table(file.path("data", "f4_2_kontant.csv"),
-                                        names = c("age", "background", "proportion", "lb", "ub"),
-                                        dictionary_cols = c("background", "age"), 
-                                        factor_cols = c("background", "age")), format = "fst_dt"),
+    tar_target(
+        dt_f1d1, 
+        load_data_table(
+            file.path("data", "f4_2_kontant.csv"),
+            names = c("age", "background", "proportion", "lb", "ub"),
+            dictionary_cols = c("background", "age"),
+            factor_cols = c("background", "age")),
+        format = "fst_dt"
+    ),
     tar_target(p_f1d1, bar_plot(dt_f1d1, "background", "proportion", color_var = "background", 
                                 breaks = seq(0,1,0.1), direction = "laying") + 
                                 theme(strip.text.y.left = element_text(angle = 0), 
@@ -902,12 +907,10 @@ list(
                             legend.position = "bottom", 
                             strip.text.y = element_text(angle = 0),
                             axis.text.y.left = element_blank(),
-                            plot.margin = margin(10,10,10,15)
+                            plot.margin = margin(10, 10, 10, 15)
                         ) + 
                         facet_grid(rows = vars(background)) + 
                         coord_flip()
                 )
-
-        
 
 )
