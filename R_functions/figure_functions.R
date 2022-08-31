@@ -110,7 +110,7 @@ set_level_names <- function(dt, factor, names){
 # Plotting functions
 
 # Plot theme for dot plots
-dot_plot_theme <- function(font = "Fengardo Neue") {
+dot_plot_theme <- function(font = "Graphik") {
     library(ggplot2)
     library(ggthemes)
 
