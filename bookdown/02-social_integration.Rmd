@@ -116,7 +116,7 @@ tar_read(p_discrimination_ethn)
 
 Får att få reda på ungas attityder till andra etniska grupper har vi en fråga om hur positivt eller negativt man ser på olika grupper i Sverige, där dessa inkluderar: amerikaner, bosnier, finländare, iranier, polacker, romer, samer, serber, somalier, svenskar, turkar och tyskar. Svaren kunde anges på en skala från 0 till 100, där 0 är maximalt negativt och 100 maximalt positivt. I Figur \@ref(fig:f5-21) ser vi att en stor majoritet av alla grupper har neutrala eller positiva attityder till andra och att variationen är relativt liten.
 
-```{r f5-21, echo=FALSE, warning=FALSE, fig.cap="Attityder till olika etniska grupper bland unga med svensk (övre delen) respektive utländsk bakgrund (nedre delen). Attityden till den grupp man själv tillhör har räknats bort"}
+```{r f5-21, echo=FALSE, warning=FALSE, fig.cap="Attityder till olika etniska grupper bland unga med svensk (övre delen) respektive utländsk bakgrund (nedre delen). Attityden till den grupp man själv tillhör har räknats bort", fig.asp = 1.4}
 tar_read(p_f5_21)
 ```
 
