@@ -2,7 +2,6 @@ fig:f1d1
 fig:f1d2
 fig:f4-4
 fig:f4-5
-fig:f4-6
 fig:f4-7
 fig:f4-8
 fig:f4-9
@@ -74,4 +73,4 @@ strukturell-integration
 social-integration
 kulturell-integration
 politisk-integration
-adaption-framtidstro-och-hälsa
+adaption
