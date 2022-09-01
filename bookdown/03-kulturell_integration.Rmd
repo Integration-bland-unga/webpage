@@ -14,13 +14,13 @@ När vi jämför generation 1 och 2 inom de större ursprungskategorierna ser vi
 tar_read(p_identification_orig)
 ```
 
-Ökad identifiering med Sverige syns också när vi tittar på utvecklingen över tid för amma individer. I Figur \@ref(fig:identification-age) ser vi hur identifieringen förändras över tid för våra deltagare. För unga i generation 2 ser vi hur de rör sig mot en högre grad av identifiering än deras föräldrar, medan unga i generation 1 rör sig mot en nivå som liknar deras föräldrar.
+Ökad identifiering med Sverige syns också när vi tittar på utvecklingen över tid för samma individer. I Figur \@ref(fig:identification-age) ser vi hur identifieringen förändras över tid för våra deltagare. För unga i generation 2 ser vi hur de rör sig mot en högre grad av identifiering än deras föräldrar, medan unga i generation 1 rör sig mot en nivå som liknar deras föräldrar.
 
 ```{r identification-age, echo=FALSE, warning=FALSE, fig.cap="Förändringen mellan åldrarna 14 och 19 i identifiering med Sverige, och föräldrarnas identifiering med Sverige (F), uppdelat på bakgrund."}
 tar_read(p_identification_age)
 ```
 
-Utöver identifiering med svenskhet så fick de unga också en fråga om de känner att de tillhör någon annan grupp, där de fick sexton alternativ alternativt ange "ingen annan grupp" eller ett fritextsvar. I Figur \@ref(fig:identification-other-age) ser vi att för unga med utländsk bakgrund ökar identifiering med en annan grupp från 14 till 16-års ålder. Ökningen är särskilt kraftig för unga som själva invandrat.
+Utöver identifiering med Sverige så fick de unga också en fråga om de känner att de tillhör någon annan grupp, där de fick sexton alternativ alternativt ange "ingen annan grupp" eller ett fritextsvar. I Figur \@ref(fig:identification-other-age) ser vi att för unga med utländsk bakgrund ökar identifiering med en annan grupp från 14 till 16-års ålder. Ökningen är särskilt kraftig för unga som själva invandrat.
 
 ```{r identification-other-age, echo=FALSE, warning=FALSE, fig.cap="Förändringen mellan åldrarna 14 och 16 i identifiering med annan etnisk grupp än svensk, samt föräldrars identifiering med annan etnisk grupp (F), uppdelat på bakgrund."}
 tar_read(p_identification_other_age)
