@@ -83,7 +83,7 @@ load_data_table <- function(f_path, names, dictionary_cols = NULL,
 
     # Cap CI
     dt[lb <= 0, lb := 0]
-    dt[ub >= 100 & "proportion" %in% colnames(dt), ub := 100]
+    dt[ub >= 1 & "proportion" %in% colnames(dt), ub := 1]
 
     return(dt)
 
@@ -435,7 +435,7 @@ gen_figindex <- function (reference_keys, outfile) {
     
     # Write list of figures
     gen_figlist(
-        fig_list, 1, 17, 
+        fig_list, 1, 16, 
         file_path = file.path("bookdown", "01-strukturell_integration.Rmd"), 
         outfile = outfile
     )
@@ -450,7 +450,7 @@ gen_figindex <- function (reference_keys, outfile) {
 
     # Write list of figures
     gen_figlist(
-        fig_list, 18, 35, 
+        fig_list, 17, 34, 
         file_path = file.path("bookdown", "02-social_integration.Rmd"), 
         outfile = outfile
     )
@@ -465,7 +465,7 @@ gen_figindex <- function (reference_keys, outfile) {
 
     # Write list of figues
     gen_figlist(
-        fig_list, 36, 59, 
+        fig_list, 35, 58, 
         file_path = file.path("bookdown", "03-kulturell_integration.Rmd"), 
         outfile = outfile
     )
@@ -494,7 +494,7 @@ gen_figindex <- function (reference_keys, outfile) {
         )
     # Write list of figures 
     gen_figlist(
-        fig_list, 63, 72, 
+        fig_list, 63, 71, 
         file_path = file.path("bookdown", "05-framtidstro.Rmd"),
         outfile = outfile
     )

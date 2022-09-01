@@ -23,7 +23,9 @@ list(
     ),
     tar_target(p_f1d1, bar_plot(dt_f1d1, "background", "proportion",
         color_var = "background",
-        breaks = seq(0, 1, 0.1), direction = "laying"
+        breaks = seq(0, 1, 0.2),
+        y_limits = c(0,1),
+        direction = "laying"
     ) +
         theme(
             strip.text.y.left = element_text(angle = 0),
@@ -361,12 +363,12 @@ list(
         facet_grid(rows = vars(background), scales = "free") +
         coord_flip() +
         theme(
-            legend.position = "bottom",
-            plot.margin = margin(10, 80, 10, 10),
+            legend.position = "right",
+            plot.margin = margin(10, 10, 10, 10),
             panel.spacing = unit(1.5, "lines"),
             axis.text.y = element_text(size = 12)
-        ) +
-        guides(color = guide_legend(nrow = 2, byrow = TRUE))),
+        )
+    ),
 
     ###
     # Kulturell integration
@@ -844,7 +846,10 @@ list(
         bar_plot(dt_integration_attitudes_background,
             "statement", "proportion",
             color_var = "background",
-            breaks = seq(0, 1, 0.2), y_limits = c(0, 0.8), direction = "laying", limits = c("SVF", "Gen 2", "Gen 1")
+            breaks = seq(0, 1, 0.2),
+            y_limits = c(0, 0.9),
+            direction = "laying",
+            limits = c("SVF", "Gen 2", "Gen 1")
         ) +
             scale_x_discrete(labels = dictionary(c("imm_adapt", "imm_keep", "swe_open", "swe_keep"))) +
             theme(axis.text.y = element_text(size = 13)) +
@@ -958,9 +963,9 @@ list(
         direction = "laying",
         color_values = c(dot_palette(3), dot_palette(6), dot_palette(2))
     ) +
-        theme(strip.text.y = element_blank(), legend.position = "none") + ylim(0, 1) +
+        theme(strip.text.y = element_blank(), legend.position = "none") + 
         scale_y_continuous(
-            breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1), limits = c(0, 1),
+            breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1), limits = c(0, 1.1),
             labels = c("0\n(Aldrig)", "0.2", "0.4", "0.6", "0.8", "1\n(Sällan)")
         ) +
         facet_grid(rows = vars(group), scales = "free", space = "free") + coord_flip()),
@@ -978,15 +983,22 @@ list(
 
     # Norm breaking
     tar_target(dt_f8_3, load_data_table(file.path("data", "f8_3_norm.csv"),
-        names = c("group", "background", "proportion", "lb", "ub"),
+        names = c("group", "background", "percentage", "lb", "ub"),
         dictionary_cols = "background",
         factor_cols = c("group", "background")
     ), format = "fst_dt"),
-    tar_target(p_f8_3, bar_plot(dt_f8_3[, proportion := proportion / 100], "background", "proportion",
-        color_var = "background",
-        direction = "laying", y_limits = c(0, 0.3),
-        color_values = c(dot_palette(3), dot_palette(6), dot_palette(2))
-    ) +
+    tar_target(p_f8_3, 
+        bar_plot(
+            dt_f8_3[, ':='(
+                        percentage = percentage / 100,
+                        lb = lb / 100,
+                        ub = ub /100
+                        )], 
+            "background", "percentage",
+            color_var = "background",
+            direction = "laying", y_limits = c(0, 0.3),
+            color_values = c(dot_palette(3), dot_palette(6), dot_palette(2))
+        ) +
         theme(strip.text.y = element_blank(), legend.position = "none") +
         facet_grid(rows = vars(group), scales = "free", space = "free") + coord_flip()),
 
@@ -998,7 +1010,9 @@ list(
     ), format = "fst_dt"),
     tar_target(p_f8_4, bar_plot(dt_f8_4, "category", "proportion",
         color_var = "category",
-        breaks = seq(0, 1, 0.1), direction = "laying", y_limits = c(0, 0.4)
+        breaks = seq(0, 1, 0.1),
+        direction = "laying",
+        y_limits = c(0, 0.41)
     ) +
         theme(
             strip.text.y.left = element_text(angle = 0),
@@ -1102,13 +1116,21 @@ list(
         satisfaction,
         "5-7" = c("5", "6", "7"),
         "8 - 10 Mycket nöjd" = c("8", "9", "10 Mycket nöjd")
-    )][, proportion_c := sum(proportion), .(satisfaction_c, background, category)]),
+    )][,
+        ':='(
+            proportion_c = sum(proportion),
+            lb = sum(lb),
+            ub = sum(ub)
+        ), 
+        .(satisfaction_c, background, category)
+    ]
+    ),
     tar_target(p_f8_8b, bar_plot(
         reverse_sort(dt_f8_8b, "background"),
         "background", "proportion_c",
         color_var = "satisfaction_c",
         direction = "laying",
-        y_limits = c(0, 0.85),
+        y_limits = c(0, 1),
         color_values = dot_palette(length(unique(dt_f8_8b[, satisfaction_c])), type = "diverging")
     ) +
         theme(

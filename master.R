@@ -32,7 +32,7 @@ change_crossrefs(
         file.path("docs", "social-integration.html"),
         file.path("docs", "kulturell-integration.html"),
         file.path("docs", "politisk-integration.html"),
-        file.path("docs", "adaption-framtidstro-och-hälsa.html"),
+        file.path("docs", "adaption.html"),
         file.path("docs", "figurindex.html")
     )
 )
