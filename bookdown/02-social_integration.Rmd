@@ -3,7 +3,7 @@
 
 ## Familj och familjerelationer {-}
 
-Figur \@ref(fig:famtyp-orig) visar familjesammansättningen bland 14-åringar med svensk respektive utländsk bakgrund. Det familjerna med utländsk bakgrund är indelade efter ursprungsregioner. Den mörkgröna prickarna visar att andelen unga som bor med både sina föräldrar (antingen biologiska eller adoptivföräldrar) är betydlig lägre för dem vars föräldrar kommer från övriga Afrika (inkludera inte Nordafrika) och Asien. För unga med bakgrund i andra ursprungsregioner är andelen som bor med båda föräldrar ungefär samma som för unga med svensk bakgrund. 
+Figur \@ref(fig:famtyp-orig) visar familjesammansättningen bland 14-åringar med svensk respektive utländsk bakgrund, indelade efter ursprungsregioner. De mörkgröna staplarna visar att andelen unga som bor med både sina föräldrar (antingen biologiska eller adoptivföräldrar) är betydlig lägre för dem vars föräldrar kommer från övriga Afrika (inkluderar inte Nordafrika) och Asien. För unga med bakgrund i andra ursprungsregioner är andelen som bor med båda föräldrar ungefär lika hög som för unga med svensk bakgrund. 
 
 ```{r famtyp-orig, echo=FALSE, warning=FALSE, fig.cap="Andel unga i olika familjetyper efter ursprungsgrupp"}
 tar_read(p_famtyp_orig)
@@ -24,31 +24,31 @@ tar_read(p_famindex)
 
 ## Sociala relationer {-}
 
-Vänskapsband mellan grupper är en viktig indikation på social integration och när vi frågade våra elever i årskurs 8 om deras fem bästa vänner ställda vi bland annat frågan om dessa vänner har svensk eller utländsk bakgrund. I Figur \@ref(fig:avg-foreign-friends) ser vi vilken andel av de fem bästa vännerna som har utländsk bakgrund, uppdelat på kön och bakgrund. I genomsnitt är knappt en femtedel av vännerna till unga med svensk bakgrund av utländsk bakgrund medan andelen är betydligt högre för unga med utländsk bakgrund (runt 70% för flickor och 60% för pojkar). 
+Vänskapsband mellan grupper är en viktig indikation på social integration och när vi frågade våra elever i årskurs 8 om deras fem bästa vänner ställde vi bland annat frågan om dessa vänner har svensk eller utländsk bakgrund. I Figur \@ref(fig:avg-foreign-friends) ser vi vilken andel av de fem bästa vännerna som har utländsk bakgrund, uppdelat på kön och bakgrund. I genomsnitt är knappt en femtedel av vännerna till unga med svensk bakgrund av utländsk bakgrund medan andelen är betydligt högre för unga med utländsk bakgrund (runt 70% för flickor och 60% för pojkar). 
 
 ```{r avg-foreign-friends, echo=FALSE, warning=FALSE, fig.cap="Genomsnittlig andel vänner med utländsk bakgrund (baserad på 5 bästa vänner, så kallad person-generator) uppdelat på kön och bakgrund."}
 tar_read(p_avg_foreign_friends)
 ```
 
-En uppenbar delförklaring till skillnaden i andelen gruppöverskridande vänskapsband är gruppernas storlek och på boende- och skolsegregation. I Figur \@ref(fig:foreign-friends-context) tar vi delvis höjd för detta genom att se hur andelen vänner med utländsk bakgrund varierar beroende på hur många i skolan som har utländsk bakgrund. Vi ser en genomgående trend att när andelen med utländsk bakgrund i skolan är större så är också andelen vänner med utländsk bakgrund det. Denna trend syns för både unga med svensk respektive utländsk bakgrund samt för både pojkar och flickor. Samtidigt så ser vi att för varje given andel av med utländsk bakgrund i skolan så har unga med svensk bakgrund färre vänner med utländsk bakgrund än de unga i generation 2 och generation 1. 
+En uppenbar delförklaring till skillnaden i andelen gruppöverskridande vänskapsband är möjlighetsstrukturen, som bestäms av gruppernas storlek och på boende- och skolsegregation. I Figur \@ref(fig:foreign-friends-context) visar vi hur andelen vänner med utländsk bakgrund varierar beroende på hur många i skolan som har utländsk bakgrund. Vi ser en genomgående trend att när andelen med utländsk bakgrund i skolan är större så är också andelen vänner med utländsk bakgrund det. Denna trend syns för både unga med svensk respektive utländsk bakgrund samt för både pojkar och flickor. Samtidigt så ser vi att vid en given andel av med utländsk bakgrund i skolan så har unga med svensk bakgrund färre vänner med utländsk bakgrund än de unga i generation 2 och generation 1. 
 
 ```{r foreign-friends-context, echo=FALSE, warning=FALSE, fig.cap="Andelen vänner med utländsk bakgrund uppdelat på bakgrund, kön respektive andelen utrikesfödda i skolan"}
 tar_read(p_avg_foreign_friends_by_percentage_gen1)
 ```
 
-För att se hur vänskapsintegrationen förändras över ålder så visar vi i Figur \@ref(fig:foreign-friends-age) andelen som uppger att de har vänner i den andra grupper. För unga med svenska bakgrund innebär det att de vänner med utländsk bakgrund, och för unga från generation 1 och 2 att de har vänner med svensk bakgrund. Det intressanta att studera i denna figur för att se om integrationen ökar är inte att jämföra linjerna med varandra utan att se trenden för varje linje. En ökning med ålder skulle innebära ökad integration. Detta är något som vi ser för unga med svensk bakgrund, där andelen som har vänner med utländsk bakgrund ökar något. För generation 2 och 1 ser vi däremot en svagt nedåtgående trend över ålder.
+För att se hur vänskapsintegrationen förändras över ålder så visar vi i Figur \@ref(fig:foreign-friends-age) andelen som uppger att de har vänner i den andra gruppen. För unga med svensk bakgrund innebär det att de har vänner med utländsk bakgrund, och för unga från generation 1 och 2 att de har vänner med svensk bakgrund. För unga med svensk bakgrund ökar andelen som har med utländsk bakgrund något. För generation 2 och 1 ser vi däremot en svagt nedåtgående trend över ålder.
 
-```{r foreign-friends-age, echo=FALSE, warning=FALSE, fig.cap="Vänskapsintegration över ålder. Andel av fem bästa från ”utgrupp” i en vid definition."}
+```{r foreign-friends-age, echo=FALSE, warning=FALSE, fig.cap="Vänskapsintegration över ålder. Andel av fem bästa vänner från ”utgrupp”, definierat som utländsk bakgrund om man själv är av svensk bakgrund, och vice versa."}
 tar_read(p_foreign_friends_age)
 ```
 
-Förutom vänskapsband så är också partnerval en viktig del av den sociala integration. Figur \@ref(fig:f5-10) visar andelen vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund. Vi ser att för unga med svensk bakgrund så var 90% samboende med någon annan med svensk bakgrund. Då andelen med utländsk bakgrund inom den åldersgruppen var 20% så tyder det på en tydlig endogami. Även för unga med utländsk bakgrund ser vi nästan genomgående att en låg andel har en sambo med svensk bakgrund. Det är speciellt tydligt för grupperna med en bakgrund i Turkiet, Mellanöstern, Irak och övriga Afrika
+Förutom vänskapsband så är också partnerval en viktig del av den sociala integrationen. Figur \@ref(fig:f5-10) visar andelen vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund. Vi ser att för unga med svensk bakgrund så var 90% samboende med någon annan med svensk bakgrund. Då andelen med utländsk bakgrund i den aktuella åldersgruppen var 20% så finna alltså en tydlig endogami. Även för unga med utländsk bakgrund ser vi nästan genomgående att en låg andel har en sambo med svensk bakgrund, och en hög andel har en sambo med samma bakgrund som en själv. Det är speciellt tydligt för grupperna med en bakgrund i länder i Mellanöstern och Afrika.
 
-```{r f5-10, echo=FALSE, fig.cap = "Andelen i olika ursprungsgrupper vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund."}
+```{r f5-10, echo=FALSE, fig.cap = "Andelen i olika ursprungsgrupper vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund (kohorten född 1996)."}
 knitr::include_graphics(file.path("assets", "images", "social" ,"5_10_endo-1.png"))
 ```
 
-Genom att bryta upp ovanstående resultat efter kön blir det tydligt att det finns en könsdimension till etnisk partnerval. I Figur \@ref(fig:f5-11) ser vi att bland de grupper som i lägst grad sammanbor med någon av svenskt ursprung, så är det framförallt drivet av att unga kvinnor oftare har partners från samma bakgrund. Denna skillnaden mellan män och kvinnor kan inte förklaras av etnisk segregation utan har kanske att göra med att för kvinnor så gäller traditionella normer i högre utsträckning.
+Genom att bryta upp ovanstående resultat efter kön blir det tydligt att endogamin är starkare bland kvinnor (figur \@ref(fig:f5-11)). Denna skillnad mellan män och kvinnor kan inte förklaras av etnisk segregation utan har sannolikt att göra med starkare normer om endogami för kvinnor.
 
 ```{r f5-11, echo=FALSE, fig.cap = "Andelen av män och kvinnor i olika ursprungsgrupper vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund"}
 knitr::include_graphics(file.path("assets", "images", "social" ,"5_11_endo_kon-2.png"))
@@ -60,7 +60,7 @@ Om vi tittar på äldre kohorter (i detta fall födda 1986-1996) ser vi ett likn
 knitr::include_graphics(file.path("assets", "images", "social" ,"5_12_endo_old_kon-3.png"))
 ```
 
-Slutligen så har vi också tittat på inter-etnisk integration i parförhållanden genom en uppdelning i fyra grupper: partners med svensk bakgrund, partners med samma bakgrund som en själv, partners med bakgrund i samma region (men inte samma land) som en själv och partner med bakgrund i en annan region. Det vi ser i Figur \@ref(fig:f5-13) är att bland som har en partner med bakgrund från ett annat land så kommer de ofta från samma region. Särskilt tydligt är det för de vars föräldrar är födda i Libanon eller Syrien. 
+Slutligen så har vi också tittat på inter-etnisk integration i parförhållanden genom en uppdelning i fyra grupper: partners med svensk bakgrund, partners med samma bakgrund som en själv, partners med bakgrund i samma region (men inte samma land) som en själv och partner med bakgrund i en annan region. Det vi ser i Figur \@ref(fig:f5-13) är att bland dem som har en partner med bakgrund från ett annat land så kommer dessa ofta från samma region. Särskilt tydligt är det för de vars föräldrar är födda i Libanon eller Syrien. 
 
 ```{r f5-13, echo=FALSE, fig.cap = "Andelen av personer i olika ursprungsgrupper vars första samboende, make/maka eller registrerad partner var med någon med svensk bakgrund, samma bakgrund som den egna, samma region som den egna eller med bakgrund i annan region. Födelsekohorterna 1986–1996. Regioner: (a) Norden, (b) Östeuropa + F.d. Sovjet, (c) F.d. Jugoslavien + Albanien, (d) MENA, Afgh, Pak, (e) Syd- & Mellanamerika, (f) Afrika."}
 knitr::include_graphics(file.path("assets", "images", "social" ,"5_13_endo_old_pan-4.png"))
@@ -90,7 +90,7 @@ tar_read(p_club_foreign)
 
 ## Social acceptans {-}
 
-Sociala relationer i skolan består inte enbart av vänskapsband utan kan också ta formen av kränkande bemötanden. Vi studerade detta genom att fråga våra elever hur ofta en elev (a) blivit retad av, (b) blivit mobbad av eller (c) varit rädd för andra elever under den senaste månaden. I Figur \@ref(fig:victim) syns ett summerat index av dessa indikatorer, där skalan går från 0 till 100 och exempelvis 11 visar att man ibland varit utsatt för en av de tre typerna av mobbning. Det vi ser är att överlag är det ovanligt att utsättas för kränkande beteenden. När unga med svensk bakgrund är i minoritet i skolan upplever de i högre utsträckning mobbning och nära unga med utländsk bakgrund är i minoritet är de på samma sätt utsatta i högre grad. Detta gäller tydligast unga i generation 1. Vi ser även att unga i generation 2 är mindre utsätta än övriga grupper.
+Sociala relationer i skolan består inte enbart av vänskapsband utan kan också ta formen av kränkande bemötanden. Vi studerade detta genom att fråga våra elever hur ofta en elev (a) blivit retad av, (b) blivit mobbad av eller (c) varit rädd för andra elever under den senaste månaden. I Figur \@ref(fig:victim) syns ett summerat index av dessa indikatorer, där skalan går från 0 till 100 och exempelvis 11 visar att man ibland varit utsatt för en av de tre typerna av mobbning. Det vi ser är att överlag är det ovanligt att utsättas för kränkande beteenden. När unga med svensk bakgrund är i minoritet i skolan upplever de i högre utsträckning mobbning och när unga med utländsk bakgrund är i minoritet är de på samma sätt utsatta i högre grad. Detta gäller tydligast unga i generation 1. Vi ser även att unga i generation 2 är mindre utsätta än övriga grupper.
 
 ```{r victim, echo=FALSE, warning=FALSE, fig.cap="Andelen som uppger att de är utsatta för mobbning uppdelat på kön och bakgrund samt efter andel med utländsk bakgrund i skolan"}
 tar_read(p_victim)
@@ -102,13 +102,13 @@ Vi försöker även fånga i vilken mån unga upplever diskriminering eller orä
 tar_read(p_f5_18)
 ```
 
-Vid 19-års ålder ställdes frågan "Hur ofta har du känt att du blivit dåligt behandlad under de senaste tolv månaderna, på grund av... (1) ditt kön, (2) din etniska eller nationella bakgrund, (3) din ålder, (4) annat skäl", med svarsalternativ från "aldrig" till "en eller flera gånger i veckan". I Figur \@ref(fig:discrimination-orig) ser vi hur stor andelen som blivit utsatt för dålig behandling av någon anledning, uppdelat på ursprungsregioner. Där ser vi att skillnaden mellan grupperna inte är särskilt stor. 
+Vid 19-års ålder ställdes frågan "Hur ofta har du känt att du blivit dåligt behandlad under de senaste tolv månaderna, på grund av... (1) ditt kön, (2) din etniska eller nationella bakgrund, (3) din ålder, (4) annat skäl", med svarsalternativ från "aldrig" till "en eller flera gånger i veckan". I Figur \@ref(fig:discrimination-orig) ser vi andelen som blivit utsatt för dålig behandling av någon anledning, uppdelat på ursprungsregioner. Där ser vi att skillnaden mellan grupperna inte är särskilt stor. 
 
 ```{r discrimination-orig, echo=FALSE, warning=FALSE, fig.cap="Andelen i olika grupper som uppger att de utsatts för dålig behandling på grund av kön, etnisk eller nationell bakgrund, ålder eller annat skäl, uppdelat på ursprungsgrupp."}
 tar_read(p_discrimination_orig)
 ```
 
-Att samtliga grupper uppger ungefär lika grad av diskriminering förklaras av att unga med svensk bakgrund i högre utsträckning upplever sig dåligt behandlade på grund av kön eller ålder och om vi tittar på upplevelser av dålig behandling på grund av etnisk eller nationell bakgrund ser vi att unga med utländsk bakgrund i högre utsträckning upplever sig utsatta, vilket illustreras i Figur \@ref(fig:discrimination-ethn). Unga med bakgrund i Mellanöstern och Afrika anger högst grad av diskriminering på denna delfråga, där 22-25% av dem har upplevt sådan diskriminering minst en gång i månaden. 
+Att samtliga grupper uppger ungefär lika grad av diskriminering förklaras av att unga med svensk bakgrund i högre utsträckning upplever sig dåligt behandlade på grund av kön eller ålder och om vi tittar på upplevelser av dålig behandling på grund av etnisk eller nationell bakgrund ser vi att unga med utländsk bakgrund i högre utsträckning upplever sig utsatta, vilket illustreras i Figur \@ref(fig:discrimination-ethn). Unga med bakgrund i Mellanöstern och Afrika anger högst grad av diskriminering på denna delfråga, där en knapp fjärdedel av dem har upplevt sådan diskriminering minst en gång i månaden. 
 
 ```{r discrimination-ethn, echo=FALSE, warning=FALSE, fig.cap="Andelen i olika grupper som uppger att de utsatts för dålig behandling på grund av etnisk eller nationell bakgrund"}
 tar_read(p_discrimination_ethn)
@@ -120,4 +120,4 @@ Får att få reda på ungas attityder till andra etniska grupper har vi en fråg
 tar_read(p_f5_21)
 ```
 
-Unga med svensk bakgrund har något mer positiva attityder till grupper med ursprung i närbelägna länder samt till amerikaner, bosnier och samer. Ett annat viktigt resultat är att unga med utländsk bakgrund har mycket positiva attityder till svenskar där 77% är positivt inställda till svenskar. 
+Unga med svensk bakgrund har något mer positiva attityder till grupper med ursprung i närbelägna länder samt till amerikaner, bosnier och samer. Ett annat viktigt resultat är att unga med utländsk bakgrund har mycket positiva attityder till svenskar: 77% är positivt inställda.

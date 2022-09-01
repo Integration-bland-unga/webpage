@@ -10,7 +10,7 @@ file.create(file = file.path("bookdown", "figurindex.Rmd"))
 # Remove old web page
 unlink(file.path("docs"), recursive = TRUE)
 
-# Render book
+# Render book to get `reference-keys.txt`
 bookdown::render_book(input = "bookdown", output_dir = "../docs")
 
 # Generate figure index
