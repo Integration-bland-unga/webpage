@@ -3,7 +3,7 @@
 <center>
 ![](assets/images/janne_jonsson.png){height=300px width=auto}
 </center>
-<b>Jan O. Jonsson</b> är professor i sociologi vid Institutet för social forskning (SOFI), Stockholms universitet, samt vid Institutet för framtidsstudier, och är knuten till Nuffield College, Universitetet i Oxford. Sedan 2007 sitter han i Kungliga vetenskapsakademien (KVA). Hans forskning gäller bland annat social ojämlikhet, integration samt barn och ungas levnadsvillkor. Han är ansvarig för den svenska delen av forskningsprojektet CILS4EU vars intervjuer med unga denna bok är baserad på.
+<b>Jan O. Jonsson</b> är professor i sociologi vid Institutet för social forskning (SOFI), Stockholms universitet, samt vid Institutet för framtidsstudier, och är knuten till Nuffield College, Universitetet i Oxford. Sedan 2007 sitter han i Kungliga vetenskapsakademien (KVA). Hans forskning gäller bland annat social ojämlikhet, integration samt barn och ungas levnadsvillkor. Han är ansvarig för den svenska delen av forskningsprojektet CILS4EU.
 
 <center>
 ![](assets/images/carina_mood.png){height=300px width=auto}
