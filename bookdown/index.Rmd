@@ -12,7 +12,7 @@ description: "Syskonsida till boken Integration bland unga"
 
 Denna sida presenterar faktamaterial om integrationen bland unga i Sverige och är ett komplement till boken [Integration bland unga](#boken) av Janne Jonsson, Carina Mood och Georg Treuter. 
 
-Här finns information om integration i flera dimensioner, så som [strukturell](#strukturell-integration), [social](#social-integration) och [politisk integration](#politisk-integration), samt information om ungdomars [adaption](#adaption-framtidstro-och-hälsa), som innefattar till exempel framtidstro och hälsa. 
+Här finns information om integration i flera dimensioner, så som [strukturell](#strukturell-integration), [social](#social-integration), [kulturell](#kulturell-integration)  och [politisk integration](#politisk-integration), samt information om ungdomars [adaption](#adaption), som innefattar till exempel framtidstro och hälsa. 
 
 ```{r, echo=FALSE}
 knitr::include_graphics(file.path("assets", "images", "dimensioner.png"))

@@ -908,10 +908,13 @@ list(
     # Politisk integration
 
     # Discussing politics by background
-    tar_target(dt_discuss_pol, load_data_table(file.path("data", "f7_1_comm_gen.csv"),
-        names = c("background", "frequency", "proportion", "lb", "ub"),
-        factor_cols = c("background", "frequency")
-    ), format = "fst_dt"),
+    tar_target(dt_discuss_pol, 
+        load_data_table(file.path("data", "f7_1_comm_gen.csv"),
+            names = c("background", "frequency", "proportion", "lb", "ub"),
+            factor_cols = c("background", "frequency"),
+            dictionary_cols = "background"
+        ), 
+        format = "fst_dt"),
     tar_target(p_discuss_pol, bar_plot(dt_discuss_pol, "background", "proportion",
         color_var = "frequency",
         color_values = dot_palette(length(unique(dt_discuss_pol[, frequency])), type = "diverging")

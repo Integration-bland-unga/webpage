@@ -480,22 +480,22 @@ gen_figindex <- function (reference_keys, outfile) {
 
     # Write list of figures
     gen_figlist(
-        fig_list, 60, 62, 
+        fig_list, 59, 61, 
         file_path = file.path("bookdown", "04-politisk_integration.Rmd"), 
         outfile = outfile
     )
 
     # Adaption
     cat(
-        "### Adaption, framtidstro och hälsa{-}\n",
+        "### Adaption {-}\n",
         file = outfile,
         sep = "\n",
         append = TRUE
         )
     # Write list of figures 
     gen_figlist(
-        fig_list, 63, 71, 
-        file_path = file.path("bookdown", "05-framtidstro.Rmd"),
+        fig_list, 62, 71, 
+        file_path = file.path("bookdown", "05-adaption.Rmd"),
         outfile = outfile
     )
 

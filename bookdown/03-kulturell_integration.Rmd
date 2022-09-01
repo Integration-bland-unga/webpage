@@ -16,30 +16,30 @@ tar_read(p_identification_orig)
 
 Ökad identifiering med Sverige syns också när vi tittar på utvecklingen över tid för samma individer. I Figur \@ref(fig:identification-age) ser vi hur identifieringen förändras över tid för våra deltagare. För unga i generation 2 ser vi hur de rör sig mot en högre grad av identifiering än deras föräldrar, medan unga i generation 1 rör sig mot en nivå som liknar deras föräldrar.
 
-```{r identification-age, echo=FALSE, warning=FALSE, fig.cap="Förändringen mellan åldrarna 14 och 19 i identifiering med Sverige, och föräldrarnas identifiering med Sverige (F), uppdelat på bakgrund.", fig.asp = 1.3}
+```{r identification-age, echo=FALSE, warning=FALSE, fig.asp = 1.3, fig.cap="Förändringen mellan åldrarna 14 och 19 i identifiering med Sverige, och föräldrarnas identifiering med Sverige (F), uppdelat på bakgrund."}
 tar_read(p_identification_age)
 ```
 
 Utöver identifiering med Sverige så fick de unga också en fråga om de känner att de tillhör någon annan grupp, där de fick sexton alternativ alternativt ange "ingen annan grupp" eller ett fritextsvar. I Figur \@ref(fig:identification-other-age) ser vi att för unga med utländsk bakgrund ökar identifiering med en annan grupp från 14 till 16-års ålder. Ökningen är särskilt kraftig för unga som själva invandrat.
 
-```{r identification-other-age, echo=FALSE, warning=FALSE, fig.cap="Förändringen mellan åldrarna 14 och 16 i identifiering med annan etnisk grupp än svensk, samt föräldrars identifiering med annan etnisk grupp (F), uppdelat på bakgrund.", fig.asp = 1.3}
+```{r identification-other-age, echo=FALSE, warning=FALSE, fig.asp = 1.3, fig.cap="Förändringen mellan åldrarna 14 och 16 i identifiering med annan etnisk grupp än svensk, samt föräldrars identifiering med annan etnisk grupp (F), uppdelat på bakgrund."}
 tar_read(p_identification_other_age)
 ```
 
 Unga med bakgrund i Asien har den lägsta nivån av identifiering med någon annan grupp, medan unga med bakgrund i Östeuropa, Mellanöstern och Afrika är ungefär likvärdiga (Figur \@ref(fig:identification-other-age-origin)).
 
-```{r identification-other-age-origin, echo=FALSE, warning=FALSE, fig.cap="Identifiering med annan etnisk grupp", fig.asp = 1.3}
+```{r identification-other-age-origin, echo=FALSE, warning=FALSE, fig.asp = 1.3, fig.cap="Identifiering med annan etnisk grupp"}
 tar_read(p_identification_other_age_origin)
 ```
 
 Våra resultat visar att etnisk identifiering förstärks under ungdomsåren och att det verkar gälla på gruppnivå för både identifieringen som svensk och för identifieringen med andra etniska grupper. I Figur \@ref(fig:f6-6) ser vi i vilken mån ungdomar definierar sig antingen som _svensk_, _annan_, _svensk eller annan_ eller _ingen_ identitet. Där är det tydligt att för unga med utländsk bakgrund så är dubbla identiteter vanliga, och ökar med ålder. Figur \@ref(fig:f6-7) visar att detta gäller för alla våra breda ursprungsregioner men att även vid 16 års ålder så är det en majoritet med ursprung från länder i Afrika som identifierar sig primärt med ingen eller annan grupp än svensk. 
 
 
-```{r f6-6, echo=FALSE, warning=FALSE, fig.cap="Förändringen mellan åldrarna 14 och 16 i etnisk identifiering (svensk/annan) uppdelat på bakgrund.", fig.asp = 1.2}
+```{r f6-6, echo=FALSE, warning=FALSE, fig.asp = 1.2, fig.cap="Förändringen mellan åldrarna 14 och 16 i etnisk identifiering (svensk/annan) uppdelat på bakgrund."}
 tar_read(p_f6_6)
 ```
 
-```{r f6-7, echo=FALSE, warning=FALSE, fig.cap="Förändringen mellan åldrarna 14 och 16 i etnisk identifiering (svensk/annan) upp- födda i Sverige, sämre svenskkunskaper än unga med svensk bakgrund, vilket delat på ursprungsregion.", fig.asp = 1.3}
+```{r f6-7, echo=FALSE, warning=FALSE, fig.asp = 1.2, fig.cap="Förändringen mellan åldrarna 14 och 16 i etnisk identifiering (svensk/annan) upp- födda i Sverige, sämre svenskkunskaper än unga med svensk bakgrund, vilket delat på ursprungsregion."}
 tar_read(p_f6_7)
 ```
 

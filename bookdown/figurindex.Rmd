@@ -10,8 +10,6 @@
 
 \@ref(fig:f4-5) - Genomsnittligt meritvärde (med 95-procentigt konfidensintervall) i årskurs 9 efter ålder vid invandring. Glidande medelvärden. Endast unga födda i Sverige eller invandrade före 15 års ålder.
 
-\@ref(fig:f4-6) - ”När du är 30 år, tror du att du kommer att ha en universitetsexamen?” Andel ja-svar av alla (ja, nej, vet inte), efter testpoäng och bakgrund. SVF=Svenskfödda föräldrar. Glidande medelvärden.
-
 \@ref(fig:f4-7) - Direktövergång till olika program på gymnasiet efter årskurs 9, elever avgångna 2012. NA=Naturprogram; SA=Samhällsprogram; Annan HSF=Annat högskoleförberedande; Yrkes=Alla icke högskoleförberedande program.
 
 \@ref(fig:f4-8) - Andelen som påbörjat universitet eller högskola senast 2020 bland unga med svensk respektive utländsk bakgrund, per kön och vid olika betygsnivåer.
@@ -48,9 +46,9 @@
 
 \@ref(fig:foreign-friends-context) - Andelen vänner med utländsk bakgrund uppdelat på bakgrund, kön respektive andelen utrikesfödda i skolan
 
-\@ref(fig:foreign-friends-age) - Vänskapsintegration över ålder. Andel av fem bästa från ”utgrupp” i en vid definition.
+\@ref(fig:foreign-friends-age) - Vänskapsintegration över ålder. Andel av fem bästa vänner från ”utgrupp”, definierat som utländsk bakgrund om man själv är av svensk bakgrund, och vice versa.
 
-\@ref(fig:f5-10) - Andelen i olika ursprungsgrupper vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund.
+\@ref(fig:f5-10) - Andelen i olika ursprungsgrupper vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund (kohorten född 1996).
 
 \@ref(fig:f5-11) - Andelen av män och kvinnor i olika ursprungsgrupper vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund
 
@@ -132,7 +130,7 @@
 
 \@ref(fig:soc-engage) - Samhällsengagemang av fyra slag, uppdelat på bakgrund.
 
-### Adaption, framtidstro och hälsa{-}
+### Adaption {-}
 
 \@ref(fig:internalising) - Internaliserande problem (nervositet, ängslighet, depression, huvudvärk, magont respektive svårt att somna), uppdelat på bakgrund och kön. Skalan går från 0 (aldrig) till 3 (ofta)
 
