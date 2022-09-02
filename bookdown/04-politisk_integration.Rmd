@@ -1,5 +1,9 @@
 # Politisk integration
 
+```{r, echo=FALSE}
+knitr::include_graphics(file.path("assets", "images", "politisk" ,"politisk_banner.png"))
+```
+
 Från [SCBs mätningar](https://www.scb.se/hitta-statistik/statistik-efter-amne/levnadsforhallanden/levnadsforhallanden/integration--analys/pong/publikationer/integration--en-beskrivning-av-laget-i-sverige/) vet vi att svenskar med utländsk bakgrund deltar i riksdagsval i lägre utsträckning. I valet 2018 så röstade 89% av förstagångsväljarna med svensk bakgrund och 75% av dem med utländsk bakgrund. Frågan om politisk integration sträcker sig dock längre än röstandet i allmänna val, och några aspekter presenteras här nedanför. 
 
 ## Politiskt intresse {-}

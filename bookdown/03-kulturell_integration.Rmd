@@ -1,5 +1,9 @@
 # Kulturell integration
 
+```{r, echo=FALSE}
+knitr::include_graphics(file.path("assets", "images", "kulturell" ,"kulturell_banner.png"))
+```
+
 ## Nationell och etnisk identifiering {-}
 
 Våra intervjupersoner fick uppge i vilken utsträckning de ”känner sig som svenska”; med fyra svarskategorier, från ”inte alls stor” till ”mycket stor”, och andelarna för olika grupper framgår av Figur \@ref(fig:identification-gen). Bland unga med svensk bakgrund är det 70 % som menar att de identifierar sig med hemlandet i ”mycket stor” utsträckning, dessutom ytterligare 27 % som svarar ”ganska stor” – totalt 97 %. Den stora skillnaden mot unga med utländsk bakgrund ligger i andelen som anger ”mycket stor” – denna ligger på 6 % i generation 1 och 12 % i generation 2. Om man summerar dem som svarat ”mycket stor” och ”ganska stor” kommer man dock upp i ganska höga siffror: 66% respektive 45 %.

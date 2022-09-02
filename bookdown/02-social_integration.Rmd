@@ -1,5 +1,8 @@
 # Social integration
 
+```{r, echo=FALSE}
+knitr::include_graphics(file.path("assets", "images", "social", "social_banner.png"))
+```
 
 ## Familj och familjerelationer {-}
 

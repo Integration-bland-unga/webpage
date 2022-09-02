@@ -1,5 +1,9 @@
 # Strukturell integration 
 
+```{r, echo=FALSE}
+knitr::include_graphics(file.path("assets", "images", "strukturell" ,"strukturell_banner.png"))
+```
+
 ## Ekonomi {-}
 
 Ett sätt att mäta en persons ekonomiska svårigheter är att fråga om man har en så kallad kontantmarginal, det vill säga om man har tillgång till en viss summa pengar om det skulle uppstå ett plötsligt behov. I vår undersökning frågade vi unga i årskurs 8: ”Om du plötsligt skulle behöva 300 kr till imorgon, skulle du kunna skaffa det då?” Summan 300 kronor är tänkt att motsvara ungefär vad det kostar att gå ut med kompisar på en aktivitet som till exempel bio, kombinerat med en enkel måltid. Andelen ja-svar på frågan är runt 70% både bland unga med svenskfödda och bland unga med utrikesfödda föräldrar. Tillgången till en liten kontantmarginal är alltså ungefär lika stor för unga med svenskfödda föräldrar, unga som invandrat (generation 1), och unga vars föräldrar invandrat (generation 2).
@@ -20,7 +24,7 @@ tar_read(p_f1d2)
 
 ## Grundskolan {-}
 
-Meritvärdet i årskurs 0 är summan av en elevs betyg i olika ämnen. Fördelningen av dessa meritvärden för eleverna i vår kohort (som gick ut årskurs 0 2012) visas i Figur \@ref(fig:f4-4), och medelvärdet för respektive grupp visas som vertikala linjer. På en skala från 0 till 320 var medelvärdet 217 för unga med svenskfödda föräldrar, 207 för unga i generation 2 och 201 för unga som invandrat före nio års ålder. Den grupp som sticker ut mest är de som invandrat sent (när de var 9–14 år), där det genomsnittliga meritvärdet är så lågt som 150. De sent invandrade har också en överrisk att ha mycket låga meritvärden
+Meritvärdet i årskurs 9 är summan av en elevs betyg i olika ämnen. Fördelningen av dessa meritvärden för eleverna i vår kohort (som gick ut årskurs 0 2012) visas i Figur \@ref(fig:f4-4), och medelvärdet för respektive grupp visas som vertikala linjer. På en skala från 0 till 320 var medelvärdet 217 för unga med svenskfödda föräldrar, 207 för unga i generation 2 och 201 för unga som invandrat före nio års ålder. Den grupp som sticker ut mest är de som invandrat sent (när de var 9–14 år), där det genomsnittliga meritvärdet är så lågt som 150. De sent invandrade har också en överrisk att ha mycket låga meritvärden
 
 
 ```{r f4-4, echo=FALSE, fig.cap = "Fördelning av meritvärde i årskurs 9 för unga som gick ut grundskolan 2012, uppdelat på bakgrund/generation"}

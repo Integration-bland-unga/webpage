@@ -1,5 +1,9 @@
 # Adaption
 
+```{r, echo=FALSE}
+knitr::include_graphics(file.path("assets", "images", "anpassning" ,"adaption_banner.png"))
+```
+
 Adaption är en individuell anpassningsprocess som står i relation till två olika miljöer och är en integrationsaspekt av mer psykologisk art. Adaptionsproblem kan ta sig flera olika uttryck, dels som internaliserande problem som nervositet, nedstämdhet och ångest och dels som externaliserande problem som ilska eller normbrytande beteende. Detta kan i sin tur också påverka hälsa, livstillfredsställelse och framtidstro. Vi undersöker här om det finns indikationer på en problematisk adaption bland unga med utländsk bakgrund genom att studera olika mått inom dessa områden.
 
 ## Internaliserande problem {-}
