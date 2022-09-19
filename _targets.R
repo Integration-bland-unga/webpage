@@ -267,7 +267,7 @@ list(
     tar_target(dt_victim, load_data_table(file.path("data", "f5_17_vict_ubak8_kon_gen.csv"),
         names = c("background", "gender", "composition", "mean", "lb", "ub"),
         dictionary_cols = c("background", "composition"),
-        factor_cols = c("gender", "background", "composition")
+        factor_cols = c("gender", "background")
     ), format = "fst_dt"),
     tar_target(p_victim, bar_plot(dt_victim, "composition", "mean",
         color_var = "composition",
@@ -750,7 +750,8 @@ list(
             theme(
                 axis.text.x = element_text(size = 13),
                 legend.position = "bottom",
-                plot.margin = margin(10, 10, 10, 10)
+                plot.margin = margin(10, 10, 10, 10),
+                strip.text.x = element_text(size = 10)
             )
     ),
 

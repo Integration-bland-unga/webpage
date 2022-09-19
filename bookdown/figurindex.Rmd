@@ -146,7 +146,7 @@
 
 \@ref(fig:f8-7) - Framtidstro på olika områden vid 14 års ålder, uppdelat på bakgrund. (”När du är 30 år, tror du att du kommer att …?”)
 
-\@ref(fig:f8-8) - Livstillfredsställelse vid 14 års ålder, uppdelat på bakgrund, ursprungsregion och kön. Genomsnittligt svar på frågan ”Hur nöjd är du med ditt liv generellt?”. Svarsalternativen från 1 till 10 är kollapsade i tre kategorier.
+\@ref(fig:f8-8) - Livstillfredsställelse vid 14 års ålder, uppdelat på bakgrund, ursprungsregion och kön. Genomsnittligt svar på frågan ”Hur nöjd är du med ditt liv generellt?”. Svarsalternativen från 1 till 10 är uppdelade i tre kategorier.
 
 \@ref(fig:f8-9) - Självskattad hälsa vid 14 års ålder, uppdelat på kön och bakgrund.
 

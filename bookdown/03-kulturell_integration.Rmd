@@ -36,7 +36,7 @@ Unga med bakgrund i Asien har den lägsta nivån av identifiering med någon ann
 tar_read(p_identification_other_age_origin)
 ```
 
-Våra resultat visar att etnisk identifiering förstärks under ungdomsåren och att det verkar gälla på gruppnivå för både identifieringen som svensk och för identifieringen med andra etniska grupper. I Figur \@ref(fig:f6-6) ser vi i vilken mån ungdomar definierar sig antingen som _svensk_, _annan_, _svensk eller annan_ eller _ingen_ identitet. Där är det tydligt att för unga med utländsk bakgrund så är dubbla identiteter vanliga, och ökar med ålder. Figur \@ref(fig:f6-7) visar att detta gäller för alla våra breda ursprungsregioner men att även vid 16 års ålder så är det en majoritet med ursprung från länder i Afrika som identifierar sig primärt med ingen eller annan grupp än svensk. 
+Våra resultat visar att etnisk identifiering förstärks under ungdomsåren och att det verkar gälla på gruppnivå för både identifieringen som svensk och för identifieringen med andra etniska grupper. I Figur \@ref(fig:f6-6) ser vi i vilken mån ungdomar definierar sig antingen som _svensk_, _annan_, _svensk och annan_ eller _ingen_ identitet. Där är det tydligt att för unga med utländsk bakgrund så är dubbla identiteter vanliga, och ökar med ålder. Figur \@ref(fig:f6-7) visar att detta gäller för alla våra breda ursprungsregioner men att även vid 16 års ålder så är det en majoritet med ursprung från länder i Afrika som identifierar sig primärt med ingen eller annan grupp än svensk. 
 
 
 ```{r f6-6, echo=FALSE, warning=FALSE, fig.asp = 1.2, fig.cap="Förändringen mellan åldrarna 14 och 16 i etnisk identifiering (svensk/annan) uppdelat på bakgrund."}
@@ -70,19 +70,19 @@ I Figur \@ref(fig:religion-origin) delar vi upp religionstillhörighet efter urs
 tar_read(p_religion_origin)
 ```
 
-För att få en indikator på religiositet har vi frågat: "Hur viktig är religionen för dig?" med  svarsalternativ. Resultatet, uppdelat på bakgrund, syns i Figur \@ref(fig:religion-importance-background) (där endast de som uppgett en religiös tillhörighet är inkluderade). Här ser vi en tydlig skillnad mellan de med svenskfödda föräldrar och de med utlandsfödda föräldrar. För unga med svensk bakgrund är det bara 6% som anser att deras religion är "mycket viktig", och 22% som tycker att den är "mycket" eller "ganska viktig". Medan för generation 2 är motsvarande siffror 4&% respektive 81% (med liknande andelar för generation 1).
+För att få en indikator på religiositet har vi frågat: "Hur viktig är religionen för dig?". Resultatet, uppdelat på bakgrund, syns i Figur \@ref(fig:religion-importance-background) (där endast de som uppgett en religiös tillhörighet är inkluderade). Här ser vi en tydlig skillnad mellan de med svenskfödda föräldrar och de med utlandsfödda föräldrar. För unga med svensk bakgrund är det bara 6% som anser att deras religion är "mycket viktig", och 22% som tycker att den är "mycket" eller "ganska viktig". För generation 2 är motsvarande siffror 40% respektive 81% (med liknande andelar för generation 1).
 
 ```{r religion-importance-background, echo=FALSE, warning=FALSE, fig.cap = "Religiositet uppdelat på bakgrund. Endast de som har en religion."}
 tar_read(p_religion_importance_background)
 ```
 
-Det finns dock stor variation inom gruppen unga med utländsk bakgrund, vilket syns i Figur \@ref(fig:religion-importance-origin)l där vi delat upp gruppen efter ursprungsregion. Religiositeten är som starkast hos unga med bakgrund i länder i Mellanöstern och Afrika, där 89-92% tycker att religionen mycket eller ganska viktig.
+Det finns dock stor variation inom gruppen unga med utländsk bakgrund, vilket syns i Figur \@ref(fig:religion-importance-origin) där vi delat upp gruppen efter ursprungsregion. Religiositeten är som starkast hos unga med bakgrund i länder i Mellanöstern och Afrika, där 89-92% tycker att religionen mycket eller ganska viktig.
 
 ```{r religion-importance-origin, echo=FALSE, warning=FALSE, fig.cap = "Religiositet bland unga med utländsk bakgrund efter ursprungsregion. Endast de som har en religion"}
 tar_read(p_religion_importance_origin)
 ```
 
-Unga muslimer är oftare starkt religiösa än unga kristna. Kristna med utländsk bakgrund har samtidigt en större andel starkt religiösa än unga med svensk bakgrund. Detta syns i Figur \@ref(fig:religion-importance-bgrel).
+Unga muslimer är oftare starkt religiösa än unga kristna. Kristna med utländsk bakgrund är dock oftare starkt religiösa än unga kristna med svensk bakgrund. Detta syns i Figur \@ref(fig:religion-importance-bgrel).
 
 ```{r religion-importance-bgrel, echo=FALSE, warning=FALSE, fig.cap = "Religiositet bland kristna respektive muslimer uppdelat efter bakgrund."}
 tar_read(p_religion_importance_bgrel)
@@ -104,13 +104,13 @@ tar_read(p_religiosity_age)
 
 ### Attityder till familj och sexualitet {-}
 
-Ett annat sätt att närma sig kulturell integration är genom att studera värderingar och attityder. Vi har frågat deltagarna i vilken grad de tycker att det är _OK_ med abort, skilsmässa, homosexualitet och samboskap utan äktenskap. Andelen som i årskurs 8 har svarat att det aldrig är OK med samboskap, skilsmässa, abort respektive homosexualitet syns i Figur \@ref(fig:family-attitudes-genderbg), uppdelat på kön och bakgrund.
+Vi har frågat i vilken grad unga tycker att det är _OK_ med abort, skilsmässa, homosexualitet och samboskap utan äktenskap. Andelen som i årskurs 8 har svarat att det aldrig är OK med samboskap, skilsmässa, abort respektive homosexualitet syns i Figur \@ref(fig:family-attitudes-genderbg), uppdelat på kön och bakgrund.
 
 ```{r family-attitudes-genderbg, echo=FALSE, warning=FALSE, fig.cap = "Andelen som anger att det aldrig är OK med skilsmässa, samboende, abort respektive homosexualitet, uppdelat på bakgrund och kön."}
 tar_read(p_family_attitudes_genderbg)
 ```
 
-Vi ser en viss integration då unga i generation 2 svarar mer sällan än unga i generation 1 ´aldrig OK´, även skillnaderna är små. Det finns också en tydlig könsskillnad där flickor i mycket lägre utsträckning än pojkar svarar ’aldrig OK’.
+Vi ser en viss integration då unga i generation 2 svarar ´aldrig OK´ mer sällan än unga i generation 1 även om skillnaderna är så. Det finns också en tydlig könsskillnad: flickor svarar ’aldrig OK’ i mycket lägre utsträckning än pojkar.
 
 Vi ser även skillnader mellan unga från olika ursprungsregioner. Unga med bakgrund i länder i Afrika och Mellanöstern svarar i hög utsträckning ´aldrig OK´, men även unga med bakgrund i Asien och övriga Europa svarar oftare ´aldrig OK´ än unga med svensk bakgrund. (Figur \@ref(fig:family-attitudes-origin)).
 
@@ -126,7 +126,7 @@ tar_read(p_family_attitudes_age)
 
 ### Attityder till jämställdhet {-}
 
-En aspekt av detta är arbetsdelningen mellan könen och för att mäta den frågade vi vem som ska ta hand om barnen, tjäna pengar, laga mat och städa hemmet. Deltagarna kunde svara "Mest mannen", "Mest kvinnan" eller "Båda ungefär lika mycket". I Figur \@ref(fig:gender-attitudes-genderbg) visar vi andelen som svarat könsstereotypt på dessa frågor (kvinnan ska ta hand om barn, laga mat och städa medan mannan ska tjäna pengar), uppdelat efter kön och bakgrund. 
+En aspekt av jämställdhet är arbetsdelningen mellan könen. Vi frågade vem som ska ta hand om barnen, tjäna pengar, laga mat och städa hemmet. Deltagarna kunde svara "Mest mannen", "Mest kvinnan" eller "Båda ungefär lika mycket". I Figur \@ref(fig:gender-attitudes-genderbg) visar vi andelen som svarat könsstereotypt på dessa frågor (kvinnan ska ta hand om barn, laga mat och städa medan mannan ska tjäna pengar), uppdelat efter kön och bakgrund. 
 
 I figuren ser vi stora skillnader mellan unga med svensk respektive utländsk bakgrund, där de senare i genomsnitt har en mer traditionell syn på vad kvinnor och män ska göra.. Vi ser även att pojkar tenderar att svara mer könsstereotypt än flickor. 
 
@@ -140,7 +140,7 @@ Vi ser också vissa skillnader mellan unga från olika ursprungsregioner (i Figu
 tar_read(p_gender_attitudes_origin)
 ```
 
-I Figur \@ref(fig:gender-attitudes-age) ser vi att båda unga med svensk och utländsk bakgrund i genomsnitt svarar mindre könsstereotypt på frågor om arbetsdelning när de blir äldre. Vi ser också en viss integration: Unga vid med olika bakgrund ligger närmare varandra i värderingar vid 19 än vid 14 års ålder, även om det kvarstår stora skillnader mellan unga med olika bakgrund.
+I Figur \@ref(fig:gender-attitudes-age) ser vi att båda unga med svensk och utländsk bakgrund i genomsnitt svarar mindre könsstereotypt på frågor om arbetsdelning när de blir äldre. Vi ser också en viss integration: Unga med olika bakgrund ligger närmare varandra i värderingar vid 19 än vid 14 års ålder, även om det kvarstår stora skillnader mellan unga med olika bakgrund.
 
 ```{r gender-attitudes-age, echo=FALSE, warning=FALSE, fig.cap = "Genomsnittlig andel i olika åldrar som ger ett könsstereotypt svar på frågor om mannen, kvinnan eller båda ungefär lika mycket ska ta hand om barn, laga mat, tjäna pengar och städa, uppdelat på bakgrund."}
 tar_read(p_gender_attitudes_age)
@@ -164,7 +164,7 @@ tar_read(p_violence_attitudes_origin)
 
 ### Attityder till integration {-}
 
-Där fick deltagarna svara om de instämmer eller i att svenskar respektive invandrare ska göra allt för att behålla sin kultur och sina traditioner samt om svenskar och invandrare ska anpassa sig efter den andra gruppen. Resultaten visas i Figur \@ref(fig:integration-attitudes-background). Där ser vi att unga med utländsk bakgrund i högre utsträckning instämmer både i att invandrare och svenskar ska göra allt för att behålla sin kultur. Unga med utländsk bakgrund tycker också högre grad att svenskar ska vara öppna för invandrares kultur och traditioner. Samtidigt så svarar fler unga med svensk bakgrund att invandrare ska anpassa sig till det svenska samhället. Vi ser alltså att både unga med svensk respektive utländsk bakgrund anser att den andra gruppen har ett större ansvar för att anpassa sig.
+Deltagarna fick svara om de instämmer eller inte i att svenskar respektive invandrare ska göra allt för att behålla sin kultur och sina traditioner samt om svenskar och invandrare ska anpassa sig efter den andra gruppen. Resultaten visas i Figur \@ref(fig:integration-attitudes-background). Där ser vi att unga med utländsk bakgrund i högre utsträckning instämmer både i att invandrare och svenskar ska göra allt för att behålla sin kultur. Unga med utländsk bakgrund tycker också i högre grad att svenskar ska vara öppna för invandrares kultur och traditioner. Samtidigt så svarar fler unga med svensk bakgrund att invandrare ska anpassa sig till det svenska samhället. Vi ser alltså att både unga med svensk respektive utländsk bakgrund anser att den andra gruppen har ett större ansvar för att anpassa sig.
 
 
 ```{r integration-attitudes-background, echo=FALSE, warning=FALSE, fig.cap = "Andelen 14-åringar som instämmer i att svenskar/invandare ska behålla sin kultur respektive anpassa sig till den andra gruppen, uppdelat på generation."}

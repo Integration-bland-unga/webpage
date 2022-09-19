@@ -24,7 +24,7 @@ tar_read(p_f1d2)
 
 ## Grundskolan {-}
 
-Meritvärdet i årskurs 9 är summan av en elevs betyg i olika ämnen. Fördelningen av dessa meritvärden för eleverna i vår kohort (som gick ut årskurs 0 2012) visas i Figur \@ref(fig:f4-4), och medelvärdet för respektive grupp visas som vertikala linjer. På en skala från 0 till 320 var medelvärdet 217 för unga med svenskfödda föräldrar, 207 för unga i generation 2 och 201 för unga som invandrat före nio års ålder. Den grupp som sticker ut mest är de som invandrat sent (när de var 9–14 år), där det genomsnittliga meritvärdet är så lågt som 150. De sent invandrade har också en överrisk att ha mycket låga meritvärden
+Meritvärdet i årskurs 9 är summan av en elevs betyg i olika ämnen. Fördelningen av dessa meritvärden för eleverna i vår kohort (som gick ut årskurs 9 2012) visas i Figur \@ref(fig:f4-4), och medelvärdet för respektive grupp visas som vertikala linjer. På en skala från 0 till 320 var medelvärdet 217 för unga med svenskfödda föräldrar, 207 för unga i generation 2 och 201 för unga som invandrat före nio års ålder. Den grupp som sticker ut mest är de som invandrat sent (när de var 9–14 år), där det genomsnittliga meritvärdet är så lågt som 150. De sent invandrade har också en överrisk att ha mycket låga meritvärden.
 
 
 ```{r f4-4, echo=FALSE, fig.cap = "Fördelning av meritvärde i årskurs 9 för unga som gick ut grundskolan 2012, uppdelat på bakgrund/generation"}
@@ -39,7 +39,7 @@ knitr::include_graphics(file.path("assets", "images", "strukturell" ,"4_5_ageimm
 
 ## Gymnasiet {-}
 
-De höga utbildningsaspirationerna bland unga med utländsk bakgrund ofta gör att de går över till studieförberedande gymnasieprogram efter grundskolan. Figur \@ref(fig:f4-7) visar fördelningen över valda gymnasieprogram. Totalt 70% av unga i generation 2 går över till studieförberedande program, jämfört med 61% av unga med svenskfödda föräldrar. Bland de unga i generation 1 som invandrat innan nio års ålder är andelen 66%. Det är framförallt övergången till naturprogrammet som mest skiljer sig mellan de med svensk respektive utländsk bakgrund.
+De höga utbildningsaspirationerna bland unga med utländsk bakgrund gör att de ofta går över till studieförberedande gymnasieprogram efter grundskolan. Figur \@ref(fig:f4-7) visar fördelningen över valda gymnasieprogram. Totalt 70% av unga i generation 2 går över till studieförberedande program, jämfört med 61% av unga med svenskfödda föräldrar. Bland de unga i generation 1 som invandrat innan nio års ålder är andelen 66%. Det är framförallt övergången till naturprogrammet som mest skiljer sig mellan de med svensk respektive utländsk bakgrund.
 
 ```{r f4-7, echo=FALSE, fig.cap = "Direktövergång till olika program på gymnasiet efter årskurs 9, elever avgångna 2012. NA=Naturprogram; SA=Samhällsprogram; Annan HSF=Annat högskoleförberedande; Yrkes=Alla icke högskoleförberedande program."}
 knitr::include_graphics(file.path("assets", "images", "strukturell" ,"4_7_gy 2-4.png"))
@@ -53,7 +53,7 @@ Att unga med utländsk bakgrund har höga utbildningsaspirationer syns även i �
 knitr::include_graphics(file.path("assets", "images", "strukturell" ,"4_8_HS_betyg 2-5.png"))
 ```
 
-Benägenheten att gå över till högre utbildning är högre bland unga med utländsk bakgrund, men i vilken mån fullföljer man utbildningen? Figur \@ref(fig:f4-9) visar andelarna som tagit 60, 120 respektive 180 högskolepoängs över tid efter den första starten vid universitet eller högskola. Här ser vi att efter 10-11 terminer är andelarna som nått en given mängd poäng ungefär lika hög för unga med utländsk respektive svensk bakgrund. Detta gäller för både män och kvinnor.
+Benägenheten att gå över till högre utbildning är högre bland unga med utländsk bakgrund, men i vilken mån fullföljer man utbildningen? Figur \@ref(fig:f4-9) visar andelarna som tagit 60, 120 respektive 180 högskolepoäng över tid efter den första starten vid universitet eller högskola. Här ser vi att efter 10-11 terminer är andelarna som nått en given mängd poäng ungefär lika hög för unga med utländsk respektive svensk bakgrund. Detta gäller för både män och kvinnor.
 
 ```{r f4-9, echo=FALSE, fig.cap = "Andelen som tagit 60, 120 respektive 180 högskolepoäng ett givet antal terminer efter den första starten vid universitet eller högskola, uppdelat på bakgrund och kön. SVF=Svenskfödda föräldrar; UB=Utländsk bakgrund."}
 knitr::include_graphics(file.path("assets", "images", "strukturell" ,"4_9_HS_points 2-6.png"))
@@ -83,7 +83,7 @@ För att förstå om resultat i Figur  \@ref(fig:f4-11) beror på en förändrin
 knitr::include_graphics(file.path("assets", "images", "strukturell" ,"4_12_HS_origin_cohort 2-9.png"))
 ```
 
-Vi ser att integrationen gällande högskoleexamina mellan ökar över kohorter för i stort sett alla grupper. Detta utesluter inte nödvändigtvis att den ökade integrationen bygger på förändringar i dessa gruppers sammansättning, men det pekar mot en mycket positiv historisk utveckling.
+Vi ser att integrationen gällande högskoleexamina mellan ökar över kohorter för i stort sett alla grupper.
 
 Om vi tittar på uppnådd gymnasieexamen vid 29 års ålder, i Figur \@ref(fig:f4-13), ser vi att andelen med examen minskar något men att skillnaden mellan unga med svensk respektive utländsk bakgrund är relativt konstant över tid.
 

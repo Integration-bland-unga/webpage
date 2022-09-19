@@ -12,7 +12,7 @@ Figur \@ref(fig:famtyp-orig) visar familjesammansättningen bland 14-åringar me
 tar_read(p_famtyp_orig)
 ```
 
-Om vi tittar mer i detalj på gruppen med separerade föräldrar, med hänsyn till boendemönster, ser vi en stor skillnad mellan unga med svensk respektive utländsk bakgrund. Andelen som bor växelvis, och ungefär lika mycket, hos sina separerade föräldrar är runt 50% för barn till svenskfödda föräldrar medan samma siffra är runt 10% för de vars föräldrar kommer från övriga Europa, Nordafrika eller Mellanöstern. För övriga grupper är andelen försumbar. Vi ser en vissa antydan till integration då växelvis boende är betydligt vanligare bland unga i generation 2 jämfört med unga i generation 1 (där växelvis boende nästan inte alls förekommer).
+Om vi tittar mer i detalj på gruppen med separerade föräldrar, med hänsyn till boendemönster, ser vi en stor skillnad mellan unga med svensk respektive utländsk bakgrund. Andelen som bor växelvis, och ungefär lika mycket, hos sina separerade föräldrar är runt 50% för barn till svenskfödda föräldrar medan samma siffra är runt 10% för de vars föräldrar kommer från övriga Europa, Nordafrika eller Mellanöstern. För övriga grupper är andelen försumbar.  antydan till integration då växelvis boende är betydligt vanligare bland unga i generation 2 jämfört med unga i generation 1 (där växelvis boende nästan inte alls förekommer).
 
 ```{r vaxbo, echo=FALSE, warning=FALSE, fig.cap="Andelen unga med separerade föräldrar som bor hos båda föräldrarna ungefär lika mycket (växelvis boende), uppdelat på bakgrund"}
 tar_read(p_vaxbo)
@@ -45,7 +45,7 @@ För att se hur vänskapsintegrationen förändras över ålder så visar vi i F
 tar_read(p_foreign_friends_age)
 ```
 
-Förutom vänskapsband så är också partnerval en viktig del av den sociala integrationen. Figur \@ref(fig:f5-10) visar andelen vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund. Vi ser att för unga med svensk bakgrund så var 90% samboende med någon annan med svensk bakgrund. Då andelen med utländsk bakgrund i den aktuella åldersgruppen var 20% så finna alltså en tydlig endogami. Även för unga med utländsk bakgrund ser vi nästan genomgående att en låg andel har en sambo med svensk bakgrund, och en hög andel har en sambo med samma bakgrund som en själv. Det är speciellt tydligt för grupperna med en bakgrund i länder i Mellanöstern och Afrika.
+Förutom vänskapsband så är också partnerval en viktig del av den sociala integrationen. Figur \@ref(fig:f5-10) visar andelen vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund. Vi ser att för unga med svensk bakgrund så var 90% samboende med någon annan med svensk bakgrund. Då andelen med utländsk bakgrund i den aktuella åldersgruppen var 20% så finna alltså en tydlig endogami. Även för unga med utländsk bakgrund ser vi nästan genomgående att en låg andel har en sambo med svensk bakgrund, och en hög andel har en sambo med samma bakgrund som en själv. Det är speciellt tydligt för grupperna med bakgrund i länder i Mellanöstern och Afrika.
 
 ```{r f5-10, echo=FALSE, fig.cap = "Andelen i olika ursprungsgrupper vars första samboende, make/maka eller registrerad partner var någon med svensk bakgrund, samma bakgrund som den egna eller med någon annan bakgrund (kohorten född 1996)."}
 knitr::include_graphics(file.path("assets", "images", "social" ,"5_10_endo-1.png"))
@@ -93,7 +93,7 @@ tar_read(p_club_foreign)
 
 ## Social acceptans {-}
 
-Sociala relationer i skolan består inte enbart av vänskapsband utan kan också ta formen av kränkande bemötanden. Vi studerade detta genom att fråga våra elever hur ofta en elev (a) blivit retad av, (b) blivit mobbad av eller (c) varit rädd för andra elever under den senaste månaden. I Figur \@ref(fig:victim) syns ett summerat index av dessa indikatorer, där skalan går från 0 till 100 och exempelvis 11 visar att man ibland varit utsatt för en av de tre typerna av mobbning. Det vi ser är att överlag är det ovanligt att utsättas för kränkande beteenden. När unga med svensk bakgrund är i minoritet i skolan upplever de i högre utsträckning mobbning och när unga med utländsk bakgrund är i minoritet är de på samma sätt utsatta i högre grad. Detta gäller tydligast unga i generation 1. Vi ser även att unga i generation 2 är mindre utsätta än övriga grupper.
+Sociala relationer i skolan består inte enbart av vänskapsband utan kan också ta formen av kränkande bemötanden. Vi studerade detta genom att fråga våra elever hur ofta en elev (a) blivit retad av, (b) blivit mobbad av eller (c) varit rädd för andra elever under den senaste månaden. I Figur \@ref(fig:victim) syns ett summerat index av dessa indikatorer, där skalan går från 0 till 100 och exempelvis 11 visar att man ibland varit utsatt för en av de tre typerna av mobbning. Det vi ser är att överlag är det ovanligt att utsättas för kränkande beteenden. När unga med svensk bakgrund är i minoritet i skolan upplever de i högre utsträckning mobbning och när unga med utländsk bakgrund är i minoritet är de på samma sätt utsatta i högre grad. Detta gäller tydligast unga i generation 1. Vi ser även att unga i generation 2 är mindre utsatta än övriga grupper.
 
 ```{r victim, echo=FALSE, warning=FALSE, fig.cap="Andelen som uppger att de är utsatta för mobbning uppdelat på kön och bakgrund samt efter andel med utländsk bakgrund i skolan"}
 tar_read(p_victim)
@@ -111,7 +111,7 @@ Vid 19-års ålder ställdes frågan "Hur ofta har du känt att du blivit dålig
 tar_read(p_discrimination_orig)
 ```
 
-Att samtliga grupper uppger ungefär lika grad av diskriminering förklaras av att unga med svensk bakgrund i högre utsträckning upplever sig dåligt behandlade på grund av kön eller ålder och om vi tittar på upplevelser av dålig behandling på grund av etnisk eller nationell bakgrund ser vi att unga med utländsk bakgrund i högre utsträckning upplever sig utsatta, vilket illustreras i Figur \@ref(fig:discrimination-ethn). Unga med bakgrund i Mellanöstern och Afrika anger högst grad av diskriminering på denna delfråga, där en knapp fjärdedel av dem har upplevt sådan diskriminering minst en gång i månaden. 
+Att samtliga grupper uppger ungefär lika grad av diskriminering förklaras av att unga med svensk bakgrund i högre utsträckning upplever sig dåligt behandlade på grund av kön eller ålder. Om vi tittar på upplevelser av dålig behandling på grund av etnisk eller nationell bakgrund ser vi att unga med utländsk bakgrund i högre utsträckning upplever sig utsatta, vilket illustreras i Figur \@ref(fig:discrimination-ethn). Unga med bakgrund i Mellanöstern och Afrika anger högst grad av diskriminering på denna delfråga, där en knapp fjärdedel av dem har upplevt sådan diskriminering minst en gång i månaden. 
 
 ```{r discrimination-ethn, echo=FALSE, warning=FALSE, fig.cap="Andelen i olika grupper som uppger att de utsatts för dålig behandling på grund av etnisk eller nationell bakgrund"}
 tar_read(p_discrimination_ethn)

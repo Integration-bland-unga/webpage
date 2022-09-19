@@ -22,7 +22,7 @@ tar_read(p_political_interest_age)
 
 ## Samhällsengagemang {-}
 
-För att fånga ungas samhällsengagemang och opinionsbildning ställde vi 19-åringar frågan: "Har du gjort något av följande för att åstadkomma förändringar eller protestera under de senaste tolv månaderna?" med alternativen "diskuterat samhällsfrågor på internet", "varit på möte med något politiskt parti eller ungdomsorganisation", burit "pins eller andra märken" för att uttrycka en åsikt och "deltagit i en demonstration eller manifestation". I Figur \@ref(fig:soc-engage) ser vi andelen som svarat ja, uppdelat på generation. Även om skillnaderna för de olika aktiviteterna är små, så finns det ett genomgående mönster att unga med utländsk bakgrund är något mer aktiva än unga med svensk bakgrund. 
+För att fånga ungas samhällsengagemang och opinionsbildning ställde vi till 19-åringar frågan: "Har du gjort något av följande för att åstadkomma förändringar eller protestera under de senaste tolv månaderna?" med alternativen "diskuterat samhällsfrågor på internet", "varit på möte med något politiskt parti eller ungdomsorganisation", burit "pins eller andra märken" för att uttrycka en åsikt och "deltagit i en demonstration eller manifestation". I Figur \@ref(fig:soc-engage) ser vi andelen som svarat ja, uppdelat på generation. Även om skillnaderna för de olika aktiviteterna är små, så finns det ett genomgående mönster att unga med utländsk bakgrund är något mer aktiva än unga med svensk bakgrund. 
 
 ```{r soc-engage, echo=FALSE, warning=FALSE, fig.cap = "Samhällsengagemang av fyra slag, uppdelat på bakgrund."}
 tar_read(p_soc_engage)
