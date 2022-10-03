@@ -131,7 +131,10 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Hide the automatically generated book title */
 h1.title{
-  display: none;
+  font-size: 3em !important;
+  text-align: center;
+  font-weight: 700;
+  color: #ec7a47;
 }
 
 /* Figure caption setting */
@@ -180,7 +183,7 @@ body > div > div.book-body.fixed > div > div.book-header.fixed > h1 {
 
 
 /* HERO IMAGE */
-.hero-image-container {
+/* .hero-image-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -197,7 +200,7 @@ body > div > div.book-body.fixed > div > div.book-header.fixed > h1 {
 
 .page-inner {
   padding-top: calc(100vw * 510/2500) !important;
-}
+} */
 
 
 /* Scaling for smaller screen */
