@@ -1,5 +1,5 @@
 # Boken {-}
 
-```{r, echo=FALSE}
-knitr::include_graphics(file.path("assets", "images", "bokomslag.jpeg"))
-```
+[![Integration bland unga](assets/images/bokomslag.jpeg)](https://www.iffs.se/publikationer/bocker/integration-bland-unga-en-mangkulturell-generation-vaxer-upp/)
+
+Hela boken _Integration bland unga_ finns tillgänglig att [ladda ner](https://www.iffs.se/publikationer/bocker/integration-bland-unga-en-mangkulturell-generation-vaxer-upp/) via Institutet för framtidsstudier

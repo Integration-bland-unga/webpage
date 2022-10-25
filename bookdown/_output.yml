@@ -2,7 +2,6 @@ bookdown::gitbook:
   toc_depth: 2
   includes:
     before_body: assets/hero-image.html
-    after_body: assets/footer.html
   css: assets/style.css
   config:
     toc:

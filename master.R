@@ -25,6 +25,10 @@ bookdown::render_book(input = "bookdown", output_dir = "../docs")
 # Create .nojekyll file
 file.create(file = file.path("docs", ".nojekyll"))
 
+# Add CNAME file
+cat("ungasintegration.se", file = file.path("docs", "CNAME"))
+
+
 # Change cross-references from arabic to alpha
 change_crossrefs(
     c(
@@ -43,3 +47,4 @@ file.copy(
     to = file.path("docs", "libs", "gitbook-2.6.7", "js", "plugin-bookdown.js"),
     overwrite = TRUE
 )
+

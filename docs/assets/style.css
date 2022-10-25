@@ -71,7 +71,7 @@ div[class='section level1 unnumbered']{
 }
 
 
-.footer hr{
+/* .footer hr{
     width: 100%;
   }
   
@@ -86,9 +86,9 @@ div[class='section level1 unnumbered']{
   }
 
   .tocify-extend-page {
-    height: 0px !important; /* Gets rid of extra space after footer*/
+    height: 0px !important; Gets rid of extra space after footer
   }
-  
+   */
 .book.font-family-1 {
   font-family: "happytimes", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }

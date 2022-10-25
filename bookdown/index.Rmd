@@ -1,11 +1,11 @@
 --- 
 site: bookdown::bookdown_site
-title: "Integration bland unga"
+title: "Ungas integration i Sverige"
 output: bookdown::gitbook
 documentclass: book
 biblio-style: apalike
 link-citations: yes
-description: "Syskonsida till boken Integration bland unga"
+description: "Denna sida presenterar faktamaterial om integrationen bland ung i Sverige, och fungerar som ett komplement till boken Integration bland unga av Janne Jonsson, Carina Mood och Georg Treuter"
 ---
 
 # Introduktion  {-}
