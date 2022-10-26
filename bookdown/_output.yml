@@ -6,7 +6,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Integration bland unga</a></li>
+        <li><a href="./">Ungas integration</a></li>
     edit : null
     download: null
     search: false
